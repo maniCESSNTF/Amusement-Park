@@ -5,8 +5,10 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class ByCard extends JFrame {
+    private Image backgroundImage;
+
     JFrame ShowCards  = new JFrame();
-    public void ShowByCard(Player player1,Player player2,Card[] cardsT1,Card[] cardsT2,Card[] cardsT3,Card[] cardsT4,Coin[] coins,int turn,JLabel[] labels,JFrame scoreFrame,JFrame frame2,JFrame frame1) {
+    public void ShowByCard(Player player1,Player player2,Card[] cardsT1,Card[] cardsT2,Card[] cardsT3,Card[] cardsT4,Coin[] coins,int turn,JLabel[] labels,JFrame scoreFrame,JFrame frame1) {
         JButton returnButton = new JButton("بازگشت به صفحه اصلی");
         JButton changeTurnButton = new JButton("تغییر نوبت");
         JButton goToScorePageButton = new JButton("نمایش امتیازها");
@@ -31,7 +33,8 @@ public class ByCard extends JFrame {
         panel2.setLayout(new FlowLayout());
         panel3.setLayout(new FlowLayout());
 
-JButton[] buttons = new JButton[48];
+
+        JButton[] buttons = new JButton[48];
 // buttons type 1
         buttons[0]  = new JButton();
         buttons[0].setPreferredSize(new Dimension(140, 197)); // Set preferred size
@@ -54,6 +57,8 @@ JButton[] buttons = new JButton[48];
                             }
                             else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
                         } else if (option == JOptionPane.NO_OPTION) {
+                            System.out.println("reservvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+
                             if(turn==0) {
                                 if(player1.getnReservCard()<3) {
                                     player1.setnGoldCo(player1.getnGoldCo() + 1);
@@ -61,11 +66,11 @@ JButton[] buttons = new JButton[48];
                                     player1.setnReservCard(player1.getnReservCard()+1);
                                     cardsT1[0].setOwner(41);
                                     buttons[0].setVisible(false);
-                                    ShowCards.setVisible(false);
+                                    ShowCards.dispose();
                                     scoreFrame.dispose();
                                     Main.changeTurn();
                                     Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                                }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                                }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                             }
                             else if(player2.getnReservCard()<3) {
                                 player2.setnGoldCo(player1.getnGoldCo() + 1);
@@ -73,11 +78,11 @@ JButton[] buttons = new JButton[48];
                                 player2.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[0].setOwner(42);
                                 buttons[0].setVisible(false);
-                                ShowCards.setVisible(false);
+                                ShowCards.dispose();
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                     }
                 }
@@ -99,7 +104,7 @@ JButton[] buttons = new JButton[48];
                     if (option == JOptionPane.YES_OPTION) {
                         if(Checkbuying(coins,cardsT1[1],turn,player1,player2)){
                             buttons[1].setVisible(false);
-                            ShowCards.setVisible(false);
+                            ShowCards.dispose();
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
@@ -113,11 +118,11 @@ JButton[] buttons = new JButton[48];
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[1].setOwner(41);
                                 buttons[1].setVisible(false);
-                                ShowCards.setVisible(false);
+                                ShowCards.dispose();
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -129,7 +134,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -169,7 +174,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -181,7 +186,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -221,7 +226,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -233,7 +238,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -273,7 +278,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -285,7 +290,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -325,7 +330,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -337,7 +342,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -377,7 +382,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -389,7 +394,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -429,7 +434,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -441,7 +446,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -481,7 +486,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -493,7 +498,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -533,7 +538,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -545,7 +550,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -585,7 +590,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -597,7 +602,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -637,7 +642,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -649,7 +654,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -689,7 +694,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -701,7 +706,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -741,7 +746,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -753,7 +758,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -793,7 +798,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -805,7 +810,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -847,7 +852,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -859,7 +864,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -899,7 +904,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -911,7 +916,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -951,7 +956,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -963,7 +968,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1003,7 +1008,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1015,7 +1020,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1055,7 +1060,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1067,7 +1072,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1107,7 +1112,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1119,7 +1124,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1159,7 +1164,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1171,7 +1176,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1211,7 +1216,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1223,7 +1228,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1263,7 +1268,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1275,7 +1280,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1315,7 +1320,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1327,7 +1332,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1367,7 +1372,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1379,7 +1384,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1419,7 +1424,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1431,7 +1436,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1471,7 +1476,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1483,7 +1488,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1523,7 +1528,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1535,7 +1540,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You reserved 3 cards!");
                     }
                 }
             }
@@ -1575,7 +1580,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1587,7 +1592,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1629,7 +1634,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1641,7 +1646,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1682,7 +1687,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1694,7 +1699,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1734,7 +1739,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1746,7 +1751,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1785,7 +1790,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1797,7 +1802,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1837,7 +1842,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1849,7 +1854,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1889,7 +1894,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1901,7 +1906,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1941,7 +1946,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -1953,7 +1958,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -1993,7 +1998,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2005,7 +2010,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2045,7 +2050,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2057,7 +2062,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2097,7 +2102,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2109,7 +2114,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2149,7 +2154,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2161,7 +2166,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2201,7 +2206,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2213,7 +2218,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2253,7 +2258,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2265,7 +2270,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2305,7 +2310,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2317,7 +2322,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2357,7 +2362,7 @@ JButton[] buttons = new JButton[48];
                                 scoreFrame.dispose();
                                 Main.changeTurn();
                                 Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
@@ -2369,7 +2374,7 @@ JButton[] buttons = new JButton[48];
                             scoreFrame.dispose();
                             Main.changeTurn();
                             Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
-                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                     }
                 }
             }
@@ -2477,6 +2482,7 @@ JButton[] buttons = new JButton[48];
                 thisCard.setOwner(1);
                 player1.setPoint(player1.getPoint()+thisCard.getPoint());
 
+                player1.setNumberCards(player1.getNumberCards()+1);
                 //برگرداندن سکه ها به بانک
                 if(player1.getnDIsBlackCO() >= thisCard.getBlackCo()){}
                 else {
@@ -2570,7 +2576,7 @@ JButton[] buttons = new JButton[48];
                     needGoldCoin += (thisCard.getGreenCo() - player1.getnGreenCo() - player1.getnDIsGreenCO());
 
                 if (needGoldCoin <= player1.getnGoldCo()) {
-
+                        player1.setNumberCards(player1.getNumberCards()+1);
                         thisCard.setOwner(1);
                         player1.setPoint(player1.getPoint()+thisCard.getPoint());
 
@@ -2664,6 +2670,7 @@ JButton[] buttons = new JButton[48];
         else {
             if (thisCard.getBlackCo() <= player2.getnBlackCo() + player2.getnDIsBlackCO() && thisCard.getWhiteCo() <= player2.getnWhaiteCo() + player2.getnDIsWhiteCO() && thisCard.getBlueCo() <= player2.getNblueCo() + player2.getnDIsBlueCO() && thisCard.getRedCo() <= player2.getnRedCo() + player2.getnDIsRedCO() && thisCard.getGreenCo() <= player2.getnGreenCo() + player2.getnDIsGreenCO()) {
 
+                player2.setNumberCards(player2.getNumberCards()+1);
                 thisCard.setOwner(2);
                 player2.setPoint(player2.getPoint()+thisCard.getPoint());
 
@@ -2750,6 +2757,7 @@ JButton[] buttons = new JButton[48];
 
                 if (needGoldCoin <= player2.getnGoldCo()) {
 
+                    player2.setNumberCards(player2.getNumberCards()+1);
                     thisCard.setOwner(1);
                     player2.setPoint(player2.getPoint()+thisCard.getPoint());
 

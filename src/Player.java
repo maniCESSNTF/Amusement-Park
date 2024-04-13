@@ -1,5 +1,5 @@
 public class Player {
-    private int point,nReservCard=-1,nRedCo, nblueCo,nBlackCo,nWhaiteCo,nGreenCo,nGoldCo,
+    private int point,nReservCard=0,nRedCo, nblueCo,nBlackCo,nWhaiteCo,nGreenCo,nGoldCo,
             nDIsGreenCO,nDIsBlueCO,nDIsWhiteCO,nDIsBlackCO,nDIsRedCO;
     private String Username,colorPlayer;
     private Card[] myCards = new Card[30];
@@ -41,7 +41,7 @@ public class Player {
     }
 
     public void setMyRservedCards(Card card) {
-        this.myRservedCards[getnReservCard()] = card;
+        this.myRservedCards[nReservCard] = card;
     }
 
     public Card[] getMyRservedCards() {return myRservedCards;}
@@ -157,6 +157,7 @@ public class Player {
     public Player(String Username, String colorPlayer) {
         setColorPlayer(colorPlayer);
         setUsername(Username);
+        setPoint(0);
     }
 
 }

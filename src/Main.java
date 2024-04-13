@@ -15,6 +15,7 @@ public class  Main extends JFrame{
     private static JFrame frame2;
     private static int turn;
     private static JFrame scoreFrame;
+    private static JFrame winerFrame;
     private static int currentPlayer = 0;
     private static Font defaultFont = new Font("tahoma", Font.BOLD, 20);
     private static JTextField PlayerUername2txt;
@@ -145,8 +146,6 @@ public class  Main extends JFrame{
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
                 frame1.setVisible(false);
                 ScorePage.showScore(Player1, Player2,CardsT1,CardsT2,CardsT3,CardsT4,coins,labels);
             }
@@ -200,8 +199,6 @@ public class  Main extends JFrame{
                 scoresPanel.add(blue2);
                 scoresPanel.add(blue1);
 
-                System.out.println("###########################"+coins[8].getOwner());
-
                 JButton goToGameButton1 = new JButton("خرید کارت");
                 goToGameButton1.setPreferredSize(new Dimension(200, 100));
                 goToGameButton1.addActionListener(new ActionListener() {
@@ -210,7 +207,7 @@ public class  Main extends JFrame{
                         scoreFrame.setVisible(false);
                       //  showGamePageByCard(Player1,Player2,CardsT1,CardsT2,CardsT3,coins,labels);
                         ByCard byCard = new ByCard();
-                        byCard.ShowByCard(Player1,Player2,CardsT1,CardsT2,CardsT3,CardsT4,coins,currentPlayer,labels,scoreFrame,frame2,frame1);
+                        byCard.ShowByCard(Player1,Player2,CardsT1,CardsT2,CardsT3,CardsT4,coins,currentPlayer,labels,scoreFrame,frame1);
                     }
                 });
 
@@ -310,11 +307,11 @@ public class  Main extends JFrame{
                 }
 
                 // اضافه کردن لیبل امتیاز بازیکن ۱ به بالا چپ صفحه
-                player1ScoreLabel.setBounds(50, 50, 200, 100);
+                player1ScoreLabel.setBounds(50, 20, 200, 100);
                 scoreFrame.add(player1ScoreLabel);
 
                 // اضافه کردن لیبل امتیاز بازیکن ۲ به بالا راست صفحه
-                player2ScoreLabel.setBounds(800, 50, 200, 100);
+                player2ScoreLabel.setBounds(800, 20, 200, 100);
                 scoreFrame.add(player2ScoreLabel);
 
                 // تنظیم لایه‌بندی برای قرار دادن کلیدهای شروع بازی در پایین صفحه
@@ -327,7 +324,19 @@ public class  Main extends JFrame{
 
                 scoreFrame.setVisible(true);
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                if((Player1.getPoint()>=15 || Player2.getPoint()>=15) && currentPlayer==0){
+        //           frame2.dispose();
+                   frame1.dispose();
+                   scoreFrame.dispose();
+                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            CenteredFrame frame = new CenteredFrame(Player1,Player2);
+                            // نمایش فریم
+                            frame.setVisible(true);
+                        }
+                    });
+
+                }
             }
         }
 
@@ -401,6 +410,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سیاه وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     else {
                         if ((typeGiving[0] == 1 && typeGiving[1]!=0 && typeGiving[1]!=1)||(typeGiving[1]==1)) {
@@ -430,6 +442,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سیاه وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     if(typeGiving[0]==typeGiving[1]) {
 
@@ -513,6 +528,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سفید وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     else {
                         if ((typeGiving[0] == 2 && typeGiving[1]!=0 && typeGiving[1]!=2)||(typeGiving[1]==2)) {
@@ -541,6 +559,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سفید وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -616,8 +637,6 @@ public class  Main extends JFrame{
                         for (int i = 8, j = 0; i < 12 && j == 0; i++) {
                             if (coins[i].getOwner() == 3) {
                                 coins[i].setOwner(1);
-                                System.out.println(" : @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+i);
-                                System.out.println(" : @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+coins[i].getOwner());
                                 j++;
                             }
                         }
@@ -625,6 +644,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه آبی وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     else {
                         if ((typeGiving[0] == 3 && typeGiving[1]!=0 && typeGiving[1]!=3)||(typeGiving[1]==3)) {
@@ -653,6 +675,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه آبی وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -737,6 +762,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه قرمز وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     else {
                         if ((typeGiving[0] == 4 && typeGiving[1] != 0 && typeGiving[1] != 4)||(typeGiving[1]==4)) {
@@ -752,7 +780,6 @@ public class  Main extends JFrame{
                                 if(typeGiving[1] !=0) {
                                     typeGiving[2] = 4;
                                 }
-
                             }
                         Player2.setnRedCo(Player2.getnRedCo() + 1);
                         for (int i = 12, j = 0; i < 16 && j == 0; i++) {
@@ -765,6 +792,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه قرمز وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
 
                     if(typeGiving[0]==typeGiving[1]) {
@@ -849,6 +879,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سبز وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     else {
                         if ((typeGiving[0] == 5 && typeGiving[1]!=0  && typeGiving[1]!=5)||(typeGiving[1]==5)) {
@@ -877,6 +910,9 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سبز وجود ندارد");
                         }
+                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                            returnCoins( Player1, Player2,coins);
+                        };
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -982,7 +1018,6 @@ public class  Main extends JFrame{
                     if(currentPlayer==0)
                     currentPlayer = 1;
                     else currentPlayer=0;
-                    System.out.println("@@@@@@"+currentPlayer);
                     frame2.setVisible(false);
                     scoreFrame.dispose();
                     ScorePage.showScore(Player1, Player2,CardsT1,CardsT2,CardsT3,CardsT4,coins, finalLabels);
@@ -1031,5 +1066,231 @@ public class  Main extends JFrame{
         if(currentPlayer==0)
             currentPlayer=1;
         else currentPlayer=0;
+    }
+
+    public static void returnCoins(Player player1, Player player2, Coin[] coins){
+        if (currentPlayer==0){
+            String[] options = {"return a black coin", "return a white coin", "return a blue coin", "return a red coin", "return a green coin"};
+            ActionListener[] optionListeners = {
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player1.getnBlackCo()>0){
+                                for(int i=0,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                       player1.setnBlackCo(player1.getnBlackCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no black coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player1.getnWhaiteCo()>0){
+                                for(int i=4,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player1.setnWhaiteCo(player1.getnWhaiteCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no white coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player1.getnBlackCo()>0){
+                                for(int i=4,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player1.setnBlackCo(player1.getnBlackCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no blue coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player1.getnRedCo()>0){
+                                for(int i=12,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player1.setnRedCo(player1.getnRedCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no red coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player1.getnGreenCo()>0){
+                                for(int i=16,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player1.setnGreenCo(player1.getnGreenCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no green coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    }
+            };
+
+            int choice = JOptionPane.showOptionDialog(null,
+                    "Your number of coins has increased from 10!",
+                    "Options",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    options,
+                    options[0]);
+
+            if (choice != JOptionPane.CLOSED_OPTION) {
+                optionListeners[choice].actionPerformed(null);
+            } else {
+                System.out.println("You closed the dialog.");
+            }
+        }else
+        if (currentPlayer==1){
+            String[] options = {"return a black coin", "return a white coin", "return a blue coin", "return a red coin", "return a green coin"};
+            ActionListener[] optionListeners = {
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player2.getnBlackCo()>0){
+                                for(int i=0,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player2.setnBlackCo(player2.getnBlackCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no black coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player2.getnWhaiteCo()>0){
+                                for(int i=4,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player2.setnWhaiteCo(player2.getnWhaiteCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no white coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player2.getnBlackCo()>0){
+                                for(int i=4,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player2.setnBlackCo(player2.getnBlackCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no blue coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player2.getnRedCo()>0){
+                                for(int i=12,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player2.setnRedCo(player2.getnRedCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no red coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    },
+                    new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            if(player2.getnGreenCo()>0){
+                                for(int i=16,j=0;j<1;i++){
+                                    if(coins[i].getOwner()==1){
+                                        j++;
+                                        coins[i].setOwner(3);
+                                        player2.setnGreenCo(player2.getnGreenCo()-1);
+                                    }
+                                }
+                            }else{
+                                JOptionPane.showMessageDialog(null, "There are no green coins!");
+                                returnCoins(player1,player2,coins);
+                            }
+                        }
+                    }
+            };
+
+            int choice = JOptionPane.showOptionDialog(null,
+                    "Your number of coins has increased from 10!",
+                    "Options",
+                    JOptionPane.DEFAULT_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE,
+                    null,
+                    options,
+                    options[0]);
+
+            if (choice != JOptionPane.CLOSED_OPTION) {
+                optionListeners[choice].actionPerformed(null);
+            } else {
+                System.out.println("You closed the dialog.");
+            }
+        }
+    }
+}
+class CenteredFrame extends JFrame {
+    public CenteredFrame(Player player1,Player player2) {
+        setTitle("Centered Frame");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel label = null;
+        // تعیین ابعاد فریم
+        setSize(400, 300);
+        if(player1.getPoint()>=15 && player2.getPoint()>=15){
+            if(player1.getNumberCards()>player2.getNumberCards())
+             label= new JLabel("         player2 is winer");
+            else
+                label= new JLabel("         player1 is winer");
+        }else if(player1.getPoint()>=15)
+            label= new JLabel("         player1 is winer");
+        else if(player2.getPoint()>=15)
+            label= new JLabel("         player2 is winer");
+
+
+        add(label);
+        // تنظیم مرکزی برای فریم
+        setLocationRelativeTo(null);
     }
 }

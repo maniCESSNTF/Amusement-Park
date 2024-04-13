@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="09499088-f04d-4b26-b099-a81fbb156e59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ByCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ByCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +79,7 @@
       <workItem from="1712658307488" duration="34995000" />
       <workItem from="1712901267229" duration="30409000" />
       <workItem from="1712982464536" duration="159000" />
+      <workItem from="1712987498956" duration="2831000" />
     </task>
     <servers />
   </component>
@@ -136,52 +137,52 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1709</line>
+          <line>2383</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1719</line>
+          <line>2393</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1758</line>
+          <line>2432</line>
           <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1778</line>
+          <line>2452</line>
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1919</line>
+          <line>2593</line>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1903</line>
+          <line>2577</line>
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1935</line>
+          <line>2609</line>
           <option name="timeStamp" value="207" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1952</line>
+          <line>2626</line>
           <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1969</line>
+          <line>2643</line>
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>1989</line>
+          <line>2663</line>
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

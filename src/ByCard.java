@@ -827,7 +827,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[1],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[0],turn,player1,player2)){
                             buttons[15].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -839,9 +839,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[1]);
+                                player1.setMyRservedCards(cardsT2[0]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[1].setOwner(41);
+                                cardsT2[0].setOwner(41);
                                 buttons[15].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -851,9 +851,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[1]);
+                            player2.setMyRservedCards(cardsT2[0]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[1].setOwner(42);
+                            cardsT2[0].setOwner(42);
                             buttons[15].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -879,7 +879,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[2],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[1],turn,player1,player2)){
                             buttons[16].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -891,9 +891,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[2]);
+                                player1.setMyRservedCards(cardsT2[1]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[2].setOwner(41);
+                                cardsT2[1].setOwner(41);
                                 buttons[16].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -903,9 +903,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[2]);
+                            player2.setMyRservedCards(cardsT2[1]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[2].setOwner(42);
+                            cardsT2[1].setOwner(42);
                             buttons[16].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -931,7 +931,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[3],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[2],turn,player1,player2)){
                             buttons[17].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -943,9 +943,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[3]);
+                                player1.setMyRservedCards(cardsT2[2]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[3].setOwner(41);
+                                cardsT2[2].setOwner(41);
                                 buttons[17].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -955,9 +955,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[3]);
+                            player2.setMyRservedCards(cardsT2[2]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[3].setOwner(42);
+                            cardsT2[2].setOwner(42);
                             buttons[17].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -983,7 +983,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[4],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[3],turn,player1,player2)){
                             buttons[18].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -995,9 +995,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[4]);
+                                player1.setMyRservedCards(cardsT2[3]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[4].setOwner(41);
+                                cardsT2[3].setOwner(41);
                                 buttons[18].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1007,9 +1007,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[4]);
+                            player2.setMyRservedCards(cardsT2[3]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[4].setOwner(42);
+                            cardsT2[3].setOwner(42);
                             buttons[18].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1035,7 +1035,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[5],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[4],turn,player1,player2)){
                             buttons[19].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1047,9 +1047,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[5]);
+                                player1.setMyRservedCards(cardsT2[4]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[5].setOwner(41);
+                                cardsT2[4].setOwner(41);
                                 buttons[19].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1059,9 +1059,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[5]);
+                            player2.setMyRservedCards(cardsT2[4]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[5].setOwner(42);
+                            cardsT2[4].setOwner(42);
                             buttons[19].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1087,7 +1087,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[6],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[5],turn,player1,player2)){
                             buttons[20].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1099,9 +1099,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[6]);
+                                player1.setMyRservedCards(cardsT2[5]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[6].setOwner(41);
+                                cardsT2[5].setOwner(41);
                                 buttons[20].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1111,9 +1111,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[6]);
+                            player2.setMyRservedCards(cardsT2[5]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[6].setOwner(42);
+                            cardsT2[5].setOwner(42);
                             buttons[20].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1139,7 +1139,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[7],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[6],turn,player1,player2)){
                             buttons[21].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1151,9 +1151,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[7]);
+                                player1.setMyRservedCards(cardsT2[6]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[7].setOwner(41);
+                                cardsT2[6].setOwner(41);
                                 buttons[21].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1163,9 +1163,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[7]);
+                            player2.setMyRservedCards(cardsT2[6]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[7].setOwner(42);
+                            cardsT2[6].setOwner(42);
                             buttons[21].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1191,7 +1191,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[8],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[7],turn,player1,player2)){
                             buttons[22].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1203,9 +1203,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[8]);
+                                player1.setMyRservedCards(cardsT2[7]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[8].setOwner(41);
+                                cardsT2[7].setOwner(41);
                                 buttons[22].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1215,9 +1215,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[8]);
+                            player2.setMyRservedCards(cardsT2[7]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[8].setOwner(42);
+                            cardsT2[7].setOwner(42);
                             buttons[22].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1243,7 +1243,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[9],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[8],turn,player1,player2)){
                             buttons[23].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1255,9 +1255,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[9]);
+                                player1.setMyRservedCards(cardsT2[8]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[9].setOwner(41);
+                                cardsT2[8].setOwner(41);
                                 buttons[23].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1267,9 +1267,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[9]);
+                            player2.setMyRservedCards(cardsT2[8]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[9].setOwner(42);
+                            cardsT2[8].setOwner(42);
                             buttons[23].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1295,8 +1295,8 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[4],turn,player1,player2)){
-                            buttons[18].setVisible(false);
+                        if(Checkbuying(coins,cardsT2[9],turn,player1,player2)){
+                            buttons[24].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
                             Main.changeTurn();
@@ -1307,9 +1307,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[10]);
+                                player1.setMyRservedCards(cardsT2[9]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[10].setOwner(41);
+                                cardsT2[9].setOwner(41);
                                 buttons[24].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1319,9 +1319,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[10]);
+                            player2.setMyRservedCards(cardsT2[9]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[10].setOwner(42);
+                            cardsT2[9].setOwner(42);
                             buttons[24].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1347,7 +1347,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[11],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[10],turn,player1,player2)){
                             buttons[25].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1359,9 +1359,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[11]);
+                                player1.setMyRservedCards(cardsT2[10]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[11].setOwner(41);
+                                cardsT2[10].setOwner(41);
                                 buttons[25].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1371,9 +1371,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[11]);
+                            player2.setMyRservedCards(cardsT2[10]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[11].setOwner(42);
+                            cardsT2[10].setOwner(42);
                             buttons[25].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1399,7 +1399,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[12],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[11],turn,player1,player2)){
                             buttons[26].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1411,9 +1411,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[12]);
+                                player1.setMyRservedCards(cardsT2[11]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[12].setOwner(41);
+                                cardsT2[11].setOwner(41);
                                 buttons[26].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1423,9 +1423,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[12]);
+                            player2.setMyRservedCards(cardsT2[11]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[12].setOwner(42);
+                            cardsT2[11].setOwner(42);
                             buttons[26].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1451,7 +1451,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[13],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[12],turn,player1,player2)){
                             buttons[27].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1463,9 +1463,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[13]);
+                                player1.setMyRservedCards(cardsT2[12]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[13].setOwner(41);
+                                cardsT2[12].setOwner(41);
                                 buttons[27].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1475,9 +1475,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[4]);
+                            player2.setMyRservedCards(cardsT2[12]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[13].setOwner(42);
+                            cardsT2[12].setOwner(42);
                             buttons[27].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1503,7 +1503,7 @@ JButton[] buttons = new JButton[48];
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[14],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[13],turn,player1,player2)){
                             buttons[28].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1515,9 +1515,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[14]);
+                                player1.setMyRservedCards(cardsT2[13]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[14].setOwner(41);
+                                cardsT2[13].setOwner(41);
                                 buttons[28].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1527,9 +1527,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[14]);
+                            player2.setMyRservedCards(cardsT2[13]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[14].setOwner(42);
+                            cardsT2[13].setOwner(42);
                             buttons[28].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1548,14 +1548,14 @@ JButton[] buttons = new JButton[48];
         buttons[29].setActionCommand("C215");
         buttons[29].setIcon(new ImageIcon("images\\card215.jpg")); // تنظیم تصویر برای دکمه گرد
         buttons[29].setVisible(false);
-        buttons[18].addActionListener(new ActionListener() {
+        buttons[29].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(e.getActionCommand().equals("C215")){
                     int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
                     // Process user choice
                     if (option == JOptionPane.YES_OPTION) {
-                        if(Checkbuying(coins,cardsT2[15],turn,player1,player2)){
+                        if(Checkbuying(coins,cardsT2[14],turn,player1,player2)){
                             buttons[29].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1567,9 +1567,9 @@ JButton[] buttons = new JButton[48];
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
                                 player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT2[15]);
+                                player1.setMyRservedCards(cardsT2[14]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
-                                cardsT2[15].setOwner(41);
+                                cardsT2[14].setOwner(41);
                                 buttons[29].setVisible(false);
                                 ShowCards.setVisible(false);
                                 scoreFrame.dispose();
@@ -1579,9 +1579,9 @@ JButton[] buttons = new JButton[48];
                         }
                         else if(player2.getnReservCard()<3) {
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
-                            player2.setMyRservedCards(cardsT2[15]);
+                            player2.setMyRservedCards(cardsT2[14]);
                             player2.setnReservCard(player2.getnReservCard()+1);
-                            cardsT2[15].setOwner(42);
+                            cardsT2[14].setOwner(42);
                             buttons[29].setVisible(false);
                             ShowCards.setVisible(false);
                             scoreFrame.dispose();
@@ -1602,6 +1602,51 @@ JButton[] buttons = new JButton[48];
             buttons[30].setActionCommand("C31");
             buttons[30].setIcon(new ImageIcon("images\\card31.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[30].setVisible(false);
+        buttons[30].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C31")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[0],turn,player1,player2)){
+                            buttons[30].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[0]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[0].setOwner(41);
+                                buttons[30].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[0]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[0].setOwner(42);
+                            buttons[30].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[30]);
 
 
@@ -1610,6 +1655,51 @@ JButton[] buttons = new JButton[48];
             buttons[31].setActionCommand("C32");
             buttons[31].setIcon(new ImageIcon("images\\card32.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[31].setVisible(false);
+        buttons[31].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C32")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[1],turn,player1,player2)){
+                            buttons[31].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[1]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[1].setOwner(41);
+                                buttons[31].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[1]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[1].setOwner(42);
+                            buttons[31].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[31]);
 
             buttons[32] = new JButton();
@@ -1617,6 +1707,50 @@ JButton[] buttons = new JButton[48];
             buttons[32].setActionCommand("C33");
             buttons[32].setIcon(new ImageIcon("images\\card33.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[32].setVisible(false);
+        buttons[32].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C33")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[2],turn,player1,player2)){
+                            buttons[32].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[2]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[2].setOwner(41);
+                                buttons[32].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[2]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[2].setOwner(42);
+                            buttons[32].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+        });
             panel3.add(buttons[32]);
 
             buttons[33] = new JButton();
@@ -1624,6 +1758,51 @@ JButton[] buttons = new JButton[48];
             buttons[33].setActionCommand("C34");
             buttons[33].setIcon(new ImageIcon("images\\card34.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[33].setVisible(false);
+        buttons[33].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C34")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[3],turn,player1,player2)){
+                            buttons[33].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[3]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[3].setOwner(41);
+                                buttons[33].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[3]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[3].setOwner(42);
+                            buttons[33].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[33]);
 
             buttons[34] = new JButton();
@@ -1631,6 +1810,51 @@ JButton[] buttons = new JButton[48];
             buttons[34].setActionCommand("C35");
             buttons[34].setIcon(new ImageIcon("images\\card35.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[34].setVisible(false);
+        buttons[34].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C35")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[4],turn,player1,player2)){
+                            buttons[34].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[4]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[4].setOwner(41);
+                                buttons[34].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[4]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[4].setOwner(42);
+                            buttons[34].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[34]);
 
             buttons[35] = new JButton();
@@ -1638,6 +1862,51 @@ JButton[] buttons = new JButton[48];
             buttons[35].setActionCommand("C36");
             buttons[35].setIcon(new ImageIcon("images\\card36.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[35].setVisible(false);
+        buttons[35].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C36")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[5],turn,player1,player2)){
+                            buttons[35].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[5]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[5].setOwner(41);
+                                buttons[35].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[5]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[5].setOwner(42);
+                            buttons[35].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add( buttons[35]);
 
             buttons[36] = new JButton();
@@ -1645,6 +1914,51 @@ JButton[] buttons = new JButton[48];
             buttons[36].setActionCommand("C37");
             buttons[36].setIcon(new ImageIcon("images\\card37.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[36].setVisible(false);
+        buttons[36].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C37")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[6],turn,player1,player2)){
+                            buttons[36].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[6]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[6].setOwner(41);
+                                buttons[36].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[6]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[6].setOwner(42);
+                            buttons[36].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[36]);
 
             buttons[37] = new JButton();
@@ -1652,6 +1966,51 @@ JButton[] buttons = new JButton[48];
             buttons[37].setActionCommand("C38");
             buttons[37].setIcon(new ImageIcon("images\\card38.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[37].setVisible(false);
+        buttons[37].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C38")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[7],turn,player1,player2)){
+                            buttons[37].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[7]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[7].setOwner(41);
+                                buttons[37].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[7]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[7].setOwner(42);
+                            buttons[37].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[37]);
 
             buttons[38] = new JButton();
@@ -1659,6 +2018,51 @@ JButton[] buttons = new JButton[48];
             buttons[38].setActionCommand("C39");
             buttons[38].setIcon(new ImageIcon("images\\card39.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[38].setVisible(false);
+        buttons[38].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C39")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[8],turn,player1,player2)){
+                            buttons[38].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[8]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[8].setOwner(41);
+                                buttons[38].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[8]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[8].setOwner(42);
+                            buttons[38].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[38]);
 
             buttons[39] = new JButton();
@@ -1666,6 +2070,51 @@ JButton[] buttons = new JButton[48];
             buttons[39].setActionCommand("C310");
             buttons[39].setIcon(new ImageIcon("images\\card310.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[39].setVisible(false);
+        buttons[39].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C310")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[9],turn,player1,player2)){
+                            buttons[39].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[9]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[9].setOwner(41);
+                                buttons[39].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[9]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[9].setOwner(42);
+                            buttons[39].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(  buttons[39]);
 
             buttons[40] = new JButton();
@@ -1673,6 +2122,51 @@ JButton[] buttons = new JButton[48];
             buttons[40].setActionCommand("C311");
             buttons[40].setIcon(new ImageIcon("images\\card311.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[40].setVisible(false);
+        buttons[40].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C311")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[10],turn,player1,player2)){
+                            buttons[40].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[10]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[10].setOwner(41);
+                                buttons[40].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[10]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[10].setOwner(42);
+                            buttons[40].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[40]);
 
             buttons[41] = new JButton();
@@ -1680,6 +2174,51 @@ JButton[] buttons = new JButton[48];
             buttons[41].setActionCommand("C312");
             buttons[41].setIcon(new ImageIcon("images\\card312.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[41].setVisible(false);
+        buttons[41].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C312")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[11],turn,player1,player2)){
+                            buttons[41].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[11]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[11].setOwner(41);
+                                buttons[41].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[11]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[11].setOwner(42);
+                            buttons[41].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[41]);
 
             buttons[42] = new JButton();
@@ -1687,6 +2226,51 @@ JButton[] buttons = new JButton[48];
             buttons[42].setActionCommand("C313");
             buttons[42].setIcon(new ImageIcon("images\\card313.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[42].setVisible(false);
+        buttons[42].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C313")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[12],turn,player1,player2)){
+                            buttons[42].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[12]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[12].setOwner(41);
+                                buttons[42].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[12]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[12].setOwner(42);
+                            buttons[42].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[42]);
 
             buttons[43] = new JButton();
@@ -1694,6 +2278,51 @@ JButton[] buttons = new JButton[48];
             buttons[43].setActionCommand("C314");
             buttons[43].setIcon(new ImageIcon("images\\card314.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[43].setVisible(false);
+        buttons[43].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C314")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[13],turn,player1,player2)){
+                            buttons[43].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[13]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[13].setOwner(41);
+                                buttons[43].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[13]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[13].setOwner(42);
+                            buttons[43].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[43]);
 
             buttons[44] = new JButton();
@@ -1701,6 +2330,51 @@ JButton[] buttons = new JButton[48];
             buttons[44].setActionCommand("C315");
             buttons[44].setIcon(new ImageIcon("images\\card315.jpg")); // تنظیم تصویر برای دکمه گرد
             buttons[44].setVisible(false);
+        buttons[44].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("C315")){
+                    int option = JOptionPane.showOptionDialog(ByCard.this, "Buy or Rserve", "Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Buy","Rserve"}, "Buy");
+                    // Process user choice
+                    if (option == JOptionPane.YES_OPTION) {
+                        if(Checkbuying(coins,cardsT3[14],turn,player1,player2)){
+                            buttons[44].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }
+                        else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
+                    } else if (option == JOptionPane.NO_OPTION) {
+                        if(turn==0) {
+                            if(player1.getnReservCard()<3) {
+                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                player1.setMyRservedCards(cardsT3[14]);
+                                player1.setnReservCard(player1.getnReservCard()+1);
+                                cardsT3[14].setOwner(41);
+                                buttons[44].setVisible(false);
+                                ShowCards.setVisible(false);
+                                scoreFrame.dispose();
+                                Main.changeTurn();
+                                Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                            }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                        }
+                        else if(player2.getnReservCard()<3) {
+                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            player2.setMyRservedCards(cardsT3[14]);
+                            player2.setnReservCard(player2.getnReservCard()+1);
+                            cardsT3[14].setOwner(42);
+                            buttons[44].setVisible(false);
+                            ShowCards.setVisible(false);
+                            scoreFrame.dispose();
+                            Main.changeTurn();
+                            Main.ScorePage.showScore(player1,player2,cardsT1,cardsT2,cardsT3,cardsT4,coins, labels);
+                        }else JOptionPane.showMessageDialog(ByCard.this, "You rservde 3 cards!");
+                    }
+                }
+            }
+
+        });
             panel3.add(buttons[44]);
 
             Random number = new Random();

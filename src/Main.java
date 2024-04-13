@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 //this cooment is alaki
-
+//you are good?
 public class  Main extends JFrame{
     private static JFrame frame1;
     private static JFrame frame2;
@@ -21,13 +21,14 @@ public class  Main extends JFrame{
     private static JTextField PlayerUername1txt;
     private static JFrame ShowCards;
 
-
     public static void main(String[] args) {
         frame1 = new JFrame("صفحه اول");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         JButton startButton = new JButton("شروع");
+
+        for(int g=0;g<5;g++);
 
         JPanel centerPanel = new JPanel(new GridLayout(2, 2, 0, 10));
 

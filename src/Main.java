@@ -8,6 +8,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+//this cooment is alaki
+
 public class  Main extends JFrame{
     private static JFrame frame1;
     private static JFrame frame2;

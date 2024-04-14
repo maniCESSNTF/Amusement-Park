@@ -39,10 +39,10 @@ public class  Main extends JFrame{
         JLabel PlayerUername2 = new JLabel("Player username 2");
         PlayerUername2.setFont(defaultFont);
         PlayerUername2.setHorizontalAlignment(SwingConstants.CENTER);
-        PlayerUername1txt = new JTextField("");
+       JTextField PlayerUername1txt = new JTextField();
         PlayerUername1txt.setHorizontalAlignment(JTextField.CENTER);
         PlayerUername1txt.getDocument().putProperty("owner", "width");
-        PlayerUername2txt = new JTextField("");
+       JTextField PlayerUername2txt = new JTextField();
         PlayerUername2txt.setHorizontalAlignment(JTextField.CENTER);
         PlayerUername2txt.getDocument().putProperty("Player username 1", "Player username 2");
 
@@ -53,7 +53,6 @@ public class  Main extends JFrame{
 
         centerPanel.setBorder(new EmptyBorder(300, 100, 100, 100));
         frame1.getContentPane().add(centerPanel, BorderLayout.CENTER);
-//////////////
 
         Card[] CardsT0 = new Card[3];
         Card CardsT1[] = new Card[15];
@@ -135,17 +134,19 @@ public class  Main extends JFrame{
         }
 
         JLabel[] labels;
-        labels = new JLabel[15];
-
-        String username1 = PlayerUername1txt.getText();
-        String username2 = PlayerUername2txt.getText();
-
-        Player Player1 = new Player(username1, null);
-        Player Player2 = new Player(username2, null);
+        labels = new JLabel[25];
 
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                String username1 = PlayerUername1txt.getText(); // دریافت مقدار وارد شده در فیلد یوزرنیم اول
+                String username2 = PlayerUername2txt.getText(); // دریافت مقدار وارد شده در فیلد یوزرنیم دوم
+
+                Player Player1 = new Player(username1, null); // ایجاد یک شیء از کلاس Player با استفاده از مقدار یوزرنیم اول
+                Player Player2 = new Player(username2, null); // ایجاد یک شیء از کلاس Player با استفاده از مقدار یوزرنیم دوم
+
+
                 frame1.setVisible(false);
                 ScorePage.showScore(Player1, Player2,CardsT1,CardsT2,CardsT3,CardsT4,coins,labels);
             }
@@ -160,16 +161,35 @@ public class  Main extends JFrame{
                 scoreFrame = new JFrame("امتیازها");
                 scoreFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 scoreFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                JLabel player1ScoreLabel = new JLabel(Player1.getUsername() + ": " + Player1.getPoint());
-                JLabel player2ScoreLabel = new JLabel(Player2.getUsername() + ": " + Player2.getPoint());
+                JLabel player1DisBlackCo = new JLabel("×"+Player1.getnDIsBlackCO());
+                JLabel player2DisBlackCo = new JLabel("×"+Player2.getnDIsBlackCO());
+
+                JLabel player2DisWhiteCo = new JLabel("×"+Player2.getnDIsWhiteCO());
+                JLabel player1DisWhiteCo = new JLabel("×"+Player1.getnDIsWhiteCO());
+
+                JLabel player2DisBlueCo = new JLabel("×"+Player2.getnDIsBlueCO());
+                JLabel player1DisBlueCo = new JLabel("×"+Player1.getnDIsBlueCO());
+
+                JLabel player2DisRedCo = new JLabel("×"+Player2.getnDIsRedCO());
+                JLabel player1DisRedCo = new JLabel("×"+Player1.getnDIsRedCO());
+
+                JLabel player2DisGreenCo = new JLabel("×"+Player2.getnDIsGreenCO());
+                JLabel player1DisGreenCo = new JLabel("×"+Player1.getnDIsGreenCO());
+
+                JLabel player2GoldCo = new JLabel("×"+Player2.getnGoldCo());
+                JLabel player1GoldCo = new JLabel("×"+Player1.getnGoldCo());
+
+                JLabel player1ScoreLabel = new JLabel(Player2.getUsername() + ": " + Player1.getPoint());
+                JLabel player2ScoreLabel = new JLabel(Player1.getUsername() + ": " + Player2.getPoint());
+
                 JLabel Turn = new JLabel(" turn : "+currentPlayer);
-                JLabel DislBackp1 = new JLabel(" DislBackp1 : "+Player1.getnDIsBlackCO());
+                JLabel DisBlackp1 = new JLabel(" DislBackp1 : "+Player1.getnDIsBlackCO());
                 JLabel DisWhaitp1 = new JLabel(" DisWhaitp1 : "+Player1.getnDIsWhiteCO());
                 JLabel DisBluep1 = new JLabel(" DisBluep1 : "+Player1.getnDIsBlueCO());
                 JLabel DisRedp1 = new JLabel(" DisRedp1 : "+Player1.getnDIsRedCO());
                 JLabel DisGreenp1 = new JLabel(" DisGreenp1 : "+Player1.getnDIsGreenCO());
 
-                JLabel DislBackp2 = new JLabel(" DislBackp2 : "+Player1.getnBlackCo());
+                JLabel DisBlackp2 = new JLabel(" DislBackp2 : "+Player1.getnBlackCo());
                 JLabel DisWhaitp2 = new JLabel(" DisWhaitp2 : "+Player1.getnWhaiteCo());
                 JLabel DisBluep2 = new JLabel(" DisBluep2 : "+Player1.getNblueCo());
                 JLabel DisRedp2 = new JLabel(" DisRedp2 : "+Player1.getnRedCo());
@@ -183,12 +203,12 @@ public class  Main extends JFrame{
                 JPanel scoresPanel = new JPanel();
 
                 scoresPanel.add(Turn);
-                scoresPanel.add(DislBackp1);
+                scoresPanel.add(DisBlackp1);
                 scoresPanel.add(DisWhaitp1);
                 scoresPanel.add(DisBluep1);
                 scoresPanel.add(DisRedp1);
                 scoresPanel.add(DisGreenp1);
-                scoresPanel.add(DislBackp2);
+                scoresPanel.add(DisBlackp2);
                 scoresPanel.add(DisWhaitp2);
                 scoresPanel.add(DisBluep2);
                 scoresPanel.add(DisRedp2);
@@ -221,7 +241,7 @@ public class  Main extends JFrame{
                     }
                 });
 
-                for (int i = 0, j = 20; i < 4; i++, j += 22) {
+                for (int i = 0, j = 110; i < 4; i++, j += 22) {
                     if (coins[i].getOwner() == 1) {
                         ImageIcon icon = new ImageIcon("images/blackCoin.png");
                         labels[i] = new JLabel(icon);
@@ -229,7 +249,7 @@ public class  Main extends JFrame{
                         scoreFrame.add(labels[i]);
                     }
                 }
-                for (int i = 0, j = 750; i < 4; i++, j += 22) {
+                for (int i = 0, j = 1090; i < 4; i++, j += 22) {
                     if (coins[i].getOwner() == 2) {
                         ImageIcon icon = new ImageIcon("images/blackCoin.png");
                         labels[i] = new JLabel(icon);
@@ -238,81 +258,178 @@ public class  Main extends JFrame{
                     }
                 }
 
-                for (int i = 4, j = 150; i < 8; i++, j += 22) {
+                for (int i = 4, j = 110; i < 8; i++, j += 22) {
                     if (coins[i].getOwner() == 1) {
                         ImageIcon icon = new ImageIcon("images/whiteCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
-                for (int i = 4, j = 880; i < 8; i++, j += 22) {
+                for (int i = 4, j = 1090; i < 8; i++, j += 22) {
                     if (coins[i].getOwner() == 2) {
                         ImageIcon icon = new ImageIcon("images/whiteCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
 
-                for (int i = 8, j = 280; i < 12; i++, j += 22) {
+                for (int i = 8, j = 110; i < 12; i++, j += 22) {
                     if (coins[i].getOwner() == 1) {
                         ImageIcon icon = new ImageIcon("images/blueCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
-                for (int i = 8, j =1010; i < 12; i++, j += 22) {
+                for (int i = 8, j =1090; i < 12; i++, j += 22) {
                     if (coins[i].getOwner() == 2) {
                         ImageIcon icon = new ImageIcon("images/blueCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
 
-                for (int i = 12, j = 410; i < 16; i++, j += 22) {
+                for (int i = 12, j = 110; i < 16; i++, j += 22) {
                     if (coins[i].getOwner() == 1) {
                         ImageIcon icon = new ImageIcon("images/redCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
-                for (int i = 12, j = 1140; i < 16; i++, j += 22) {
+                for (int i = 12, j = 1090; i < 16; i++, j += 22) {
                     if (coins[i].getOwner() == 2) {
                         ImageIcon icon = new ImageIcon("images/redCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
 
-                for (int i = 16, j = 540; i < 20; i++, j += 22) {
+                for (int i = 16, j = 110; i < 20; i++, j += 22) {
                     if (coins[i].getOwner() == 1) {
                         ImageIcon icon = new ImageIcon("images/greenCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
-                for (int i = 16, j = 1270; i < 20; i++, j += 22) {
+                for (int i = 16, j = 1090; i < 20; i++, j += 22) {
                     if (coins[i].getOwner() == 2) {
                         ImageIcon icon = new ImageIcon("images/greenCoin.png");
                         labels[i] = new JLabel(icon);
-                        labels[i].setBounds(j, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                        labels[i].setBounds(j, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                         scoreFrame.add(labels[i]);
                     }
                 }
 
-                // اضافه کردن لیبل امتیاز بازیکن ۱ به بالا چپ صفحه
-                player1ScoreLabel.setBounds(50, 20, 200, 100);
-                scoreFrame.add(player1ScoreLabel);
+                //نمایش تعداد سکه های تخفیف
+                do {
+                    // اضافه کردن لیبل امتیاز بازیکن ۱ به بالا چپ صفحه
+                    player1ScoreLabel.setBounds(50, 20, 200, 100);
+                    scoreFrame.add(player1ScoreLabel);
 
-                // اضافه کردن لیبل امتیاز بازیکن ۲ به بالا راست صفحه
-                player2ScoreLabel.setBounds(800, 20, 200, 100);
-                scoreFrame.add(player2ScoreLabel);
+                    // اضافه کردن لیبل امتیاز بازیکن ۲ به بالا راست صفحه
+                    player2ScoreLabel.setBounds(1080, 10, 200, 100);
+                    scoreFrame.add(player2ScoreLabel);
+
+                    JLabel[] disCoins;
+                    disCoins = new JLabel[12];
+                    int i = 0;
+                    ImageIcon icon = new ImageIcon("images/DISblackCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1DisBlackCo.setBounds(95, 80, 50, 50);
+                    scoreFrame.add(player1DisBlackCo);
+                    i++;
+
+                    icon = new ImageIcon("images/DISwhiteCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1DisWhiteCo.setBounds(95, 180, 50, 50);
+                    scoreFrame.add(player1DisWhiteCo);
+                    i++;
+                    icon = new ImageIcon("images/DISblueCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1DisBlueCo.setBounds(95, 280, 50, 50);
+                    scoreFrame.add(player1DisBlueCo);
+                    i++;
+                    icon = new ImageIcon("images/DISredCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1DisRedCo.setBounds(95, 380, 50, 50);
+                    scoreFrame.add(player1DisRedCo);
+                    i++;
+                    icon = new ImageIcon("images/DISgreenCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1DisGreenCo.setBounds(95, 480, 50, 50);
+                    scoreFrame.add(player1DisGreenCo);
+                    i++;
+                     icon = new ImageIcon("images/goldCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(20, 550, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player1GoldCo.setBounds(105, 580, 50, 50);
+                    scoreFrame.add(player1GoldCo);
+                    i++;
+
+
+
+
+                    icon = new ImageIcon("images/DISblackCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2DisBlackCo.setBounds(1075, 80, 50, 50);
+                    scoreFrame.add(player2DisBlackCo);
+                    i++;
+                    icon = new ImageIcon("images/DISwhiteCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2DisWhiteCo.setBounds(1075, 180, 50, 50);
+                    scoreFrame.add(player2DisWhiteCo);
+                    i++;
+                    icon = new ImageIcon("images/DISblueCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2DisBlueCo.setBounds(1075, 280, 50, 50);
+                    scoreFrame.add(player2DisBlueCo);
+                    i++;
+                    icon = new ImageIcon("images/DISredCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2DisRedCo.setBounds(1075, 380, 50, 50);
+                    scoreFrame.add(player2DisRedCo);
+                    i++;
+                    icon = new ImageIcon("images/DISgreenCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2DisGreenCo.setBounds(1075, 480, 50, 50);
+                    scoreFrame.add(player2DisGreenCo);
+                    i++;
+                    icon = new ImageIcon("images/goldCoin.png");
+                    disCoins[i] = new JLabel(icon);
+                    disCoins[i].setBounds(1000, 550, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    scoreFrame.add(disCoins[i]);
+                    player2GoldCo.setBounds(1085, 580, 50, 50);
+                    scoreFrame.add(player2GoldCo);
+                    i++;
+
+                }while(false);
 
                 // تنظیم لایه‌بندی برای قرار دادن کلیدهای شروع بازی در پایین صفحه
                 JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -559,7 +676,7 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سفید وجود ندارد");
                         }
-                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                        if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
                         };
                     }
@@ -675,7 +792,7 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه آبی وجود ندارد");
                         }
-                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                        if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
                         };
                     }
@@ -792,7 +909,7 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه قرمز وجود ندارد");
                         }
-                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                        if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
                         };
                     }
@@ -910,7 +1027,7 @@ public class  Main extends JFrame{
                         else{
                             JOptionPane.showMessageDialog(null, "سکه سبز وجود ندارد");
                         }
-                        if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
+                        if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
                         };
                     }
@@ -1106,12 +1223,12 @@ public class  Main extends JFrame{
                     },
                     new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
-                            if(player1.getnBlackCo()>0){
-                                for(int i=4,j=0;j<1;i++){
+                            if(player1.getNblueCo()>0){
+                                for(int i=8,j=0;j<1;i++){
                                     if(coins[i].getOwner()==1){
                                         j++;
                                         coins[i].setOwner(3);
-                                        player1.setnBlackCo(player1.getnBlackCo()-1);
+                                        player1.setNblueCo(player1.getNblueCo()-1);
                                     }
                                 }
                             }else{

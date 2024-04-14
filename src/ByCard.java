@@ -2384,43 +2384,81 @@ public class ByCard extends JFrame {
 
             Random number = new Random();
 
+        //جایگزینی کارت های جدید از نوع 1
             int CardsVisibelTrue=0;
+            int avilableCards=4;
+            int CardsBought=0;
+            for(int i=0;i<15;i++){
+                    if(buttons[i].isVisible()==true){
+                            CardsVisibelTrue++;}
+            }
 
             for(int i=0;i<15;i++){
-                    if(buttons[i].isVisible()==true)
-                            CardsVisibelTrue++;
+                if(cardsT1[i].getBought()==true){
+                    CardsBought++;}
             }
-            for(;CardsVisibelTrue<4;) {
+
+            if(CardsBought>11){
+                avilableCards=15-CardsBought;}
+
+            for(int i=0;(i+CardsVisibelTrue)<avilableCards;) {
                     int x = number.nextInt(15);
                     if(buttons[x].isVisible()==false && cardsT1[x].getOwner()==3 && cardsT1[x].getBought()==false) {
                             buttons[x].setVisible(true);
-                            CardsVisibelTrue++;
+                            i++;
                     }
             }
 
+
+            //جایگزینی کارت های جدید از نوع 2
             CardsVisibelTrue=0;
+            CardsBought=0;
+            avilableCards=4;
+        for(int i=0;i<15;i++){
+            if(cardsT2[i].getBought()==true){
+                CardsBought++;}
+        }
+
+        if(CardsBought>11){
+            avilableCards=15-CardsBought;}
+
             for(int i=15;i<30;i++){
                     if(buttons[i].isVisible()==true)
                             CardsVisibelTrue++;
             }
-            for(;CardsVisibelTrue<4;) {
+
+            for(int i=0;(i+CardsVisibelTrue)<avilableCards;) {
                     int x = number.nextInt(15)+15;
                     if(buttons[x].isVisible()==false && cardsT2[x-15].getOwner()==3 && cardsT2[x-15].getBought()==false) {
                             buttons[x].setVisible(true);
-                            CardsVisibelTrue++;
+                            i++;
                     }
             }
 
-            CardsVisibelTrue=0;
-            for(int i=30;i<45;i++){
+
+        //جایگزینی کارت های جدید از نوع 3
+        CardsVisibelTrue=0;
+        CardsBought=0;
+        avilableCards=4;
+
+        for(int i=0;i<15;i++){
+            if(cardsT3[i].getBought()==true){
+                CardsBought++;}
+        }
+
+        if(CardsBought>11){
+            avilableCards=15-CardsBought;}
+
+
+        for(int i=30;i<45;i++){
                     if(buttons[i].isVisible()==true)
                             CardsVisibelTrue++;
             }
-            for(;CardsVisibelTrue<4;) {
+            for(int i=0;(i+CardsVisibelTrue)<avilableCards;) {
                     int x = number.nextInt(15)+30;
                     if(buttons[x].isVisible()==false && cardsT3[x-30].getOwner()==3 && cardsT3[x-30].getBought()==false) {
                             buttons[x].setVisible(true);
-                            CardsVisibelTrue++;
+                            i++;
                     }
             }
         // Add panels to the grid panel
@@ -2486,7 +2524,7 @@ public class ByCard extends JFrame {
                 //برگرداندن سکه ها به بانک
                 if(player1.getnDIsBlackCO() >= thisCard.getBlackCo()){}
                 else {
-                    for (int i = 0, j = 0; j < -player1.getnDIsBlackCO() + thisCard.getBlackCo(); i++) {
+                    for (int i = 0, j = 0; j <  thisCard.getBlackCo()-player1.getnDIsBlackCO(); i++) {
                         if (coins[i].getOwner() == 1){
                             coins[i].setOwner(3);
                             j++;}
@@ -2495,7 +2533,7 @@ public class ByCard extends JFrame {
 
                 if(player1.getnDIsWhiteCO()>= thisCard.getWhiteCo()){}
                 else {
-                    for (int i = 4, j = 0; j < -player1.getnDIsWhiteCO() + thisCard.getWhiteCo(); i++) {
+                    for (int i = 4, j = 0; j <  thisCard.getWhiteCo()-player1.getnDIsWhiteCO(); i++) {
                         if (coins[i].getOwner() == 1){
                             coins[i].setOwner(3);
                             j++;}
@@ -2513,7 +2551,7 @@ public class ByCard extends JFrame {
 
                 if(player1.getnDIsRedCO() >= thisCard.getRedCo()){}
                 else{
-                    for (int i = 12, j = 0; j < -player1.getnDIsRedCO() + thisCard.getRedCo(); i++) {
+                    for (int i = 12, j = 0; j < thisCard.getRedCo()-player1.getnDIsRedCO(); i++) {
                         if (coins[i].getOwner() == 1){
                             coins[i].setOwner(3);
                             j++;}
@@ -2522,7 +2560,7 @@ public class ByCard extends JFrame {
 
                 if(player1.getnDIsGreenCO() >= thisCard.getGreenCo()){}
                else {
-                    for (int i = 16, j = 0; j < -player1.getnDIsGreenCO() + thisCard.getGreenCo(); i++) {
+                    for (int i = 16, j = 0; j <  thisCard.getGreenCo()-player1.getnDIsGreenCO(); i++) {
                         if (coins[i].getOwner() == 1){
                             coins[i].setOwner(3);
                             j++;}
@@ -2668,7 +2706,7 @@ public class ByCard extends JFrame {
             }
         }
         else {
-            if (thisCard.getBlackCo() <= player2.getnBlackCo() + player2.getnDIsBlackCO() && thisCard.getWhiteCo() <= player2.getnWhaiteCo() + player2.getnDIsWhiteCO() && thisCard.getBlueCo() <= player2.getNblueCo() + player2.getnDIsBlueCO() && thisCard.getRedCo() <= player2.getnRedCo() + player2.getnDIsRedCO() && thisCard.getGreenCo() <= player2.getnGreenCo() + player2.getnDIsGreenCO()) {
+            if ((thisCard.getBlackCo() <= (player2.getnBlackCo() + player2.getnDIsBlackCO()) )&& (thisCard.getWhiteCo() <= (player2.getnWhaiteCo() + player2.getnDIsWhiteCO())) && (thisCard.getBlueCo() <= (player2.getNblueCo() + player2.getnDIsBlueCO())) && (thisCard.getRedCo() <= (player2.getnRedCo() + player2.getnDIsRedCO() ))&& (thisCard.getGreenCo() <= (player2.getnGreenCo() + player2.getnDIsGreenCO()))) {
 
                 player2.setNumberCards(player2.getNumberCards()+1);
                 thisCard.setOwner(2);
@@ -2677,51 +2715,62 @@ public class ByCard extends JFrame {
                 //برگرداندن سکه ها به بانک
                 if(player2.getnDIsBlackCO() >= thisCard.getBlackCo()){}
                 else {
-                    for (int i = 0, j = 0; j < -player2.getnDIsBlackCO() + thisCard.getBlackCo(); i++) {
-                        if (coins[i].getOwner() == 2)
-                            coins[i].setOwner(3);j++;
+                    for (int i = 0, j = 0; j <  thisCard.getBlackCo()-player2.getnDIsBlackCO(); i++) {
+                        if (coins[i].getOwner() == 2){
+                            coins[i].setOwner(3);
+                        j++;}
                     }
                 }
+
                 if(player2.getnDIsWhiteCO()>= thisCard.getWhiteCo()){}
                 else {
-                    for (int i = 4, j = 0; j < -player2.getnDIsWhiteCO() + thisCard.getWhiteCo(); i++) {
-                        if (coins[i].getOwner() == 2)
-                            coins[i].setOwner(3);j++;
+                    for (int i = 4, j = 0; j <  thisCard.getWhiteCo()-player2.getnDIsWhiteCO(); i++) {
+                        if (coins[i].getOwner() == 2){
+                            coins[i].setOwner(3);
+                        j++;}
                     }
                 }
+
                 if(player2.getnDIsBlueCO() >= thisCard.getBlueCo()){}
                 else {
-                    for (int i = 8, j = 0; j < -player2.getnDIsBlueCO() + thisCard.getBlueCo(); i++) {
-                        if (coins[i].getOwner() == 2)
-                            coins[i].setOwner(3);j++;
+                    for (int i = 8, j = 0; j <  thisCard.getBlueCo()-player2.getnDIsBlueCO(); i++) {
+                        if (coins[i].getOwner() == 2){
+                            coins[i].setOwner(3);
+                        j++;}
                     }
                 }
 
                 if(player2.getnDIsRedCO() >= thisCard.getRedCo()){}
                 else{
-                    for (int i = 12, j = 0; j < -player2.getnDIsRedCO() + thisCard.getRedCo(); i++) {
-                    if (coins[i].getOwner() == 2)
-                        coins[i].setOwner(3);j++;
+                    for (int i = 12, j = 0; j <   thisCard.getRedCo()-player2.getnDIsRedCO(); i++) {
+                    if (coins[i].getOwner() == 2){
+                        coins[i].setOwner(3);
+                    j++;}
                 }
                 }
 
                 if(player2.getnDIsGreenCO() >= thisCard.getGreenCo()){}
                 else {
-                    for (int i = 16, j = 0; j < -player2.getnDIsGreenCO() + thisCard.getGreenCo(); i++) {
-                        if (coins[i].getOwner() == 2)
-                            coins[i].setOwner(3);j++;
+                    for (int i = 16, j = 0; j <   thisCard.getGreenCo()-player2.getnDIsGreenCO(); i++) {
+                        if (coins[i].getOwner() == 2){
+                            coins[i].setOwner(3);
+                            j++;}
                     }
                 }
 
                 //کاهش سکه های درج شده روی کارت
                 if(player2.getnDIsBlackCO() >= thisCard.getBlackCo()){}
                 else    player2.setnBlackCo(player2.getnBlackCo() + player2.getnDIsBlackCO() - thisCard.getBlackCo());
+
                 if(player2.getnDIsWhiteCO()>= thisCard.getWhiteCo()){}
                 else  player2.setnWhaiteCo(player2.getnWhaiteCo() + player2.getnDIsWhiteCO() - thisCard.getWhiteCo());
+
                 if(player2.getnDIsBlueCO() >= thisCard.getBlueCo()){}
                 else   player2.setNblueCo(player2.getNblueCo() + player2.getnDIsBlueCO() - thisCard.getBlueCo());
+
                 if(player2.getnDIsRedCO() >= thisCard.getRedCo()){}
                 else  player2.setnRedCo(player2.getnRedCo() + player2.getnDIsRedCO() - thisCard.getRedCo());
+
                 if(player2.getnDIsGreenCO() >= thisCard.getGreenCo()){}
                 else  player2.setnGreenCo(player2.getnGreenCo() + player2.getnDIsGreenCO() - thisCard.getGreenCo());
 

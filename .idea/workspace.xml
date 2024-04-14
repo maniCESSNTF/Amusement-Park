@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09499088-f04d-4b26-b099-a81fbb156e59" name="Changes" comment="add every cards in Jpanel">
+    <list default="true" id="09499088-f04d-4b26-b099-a81fbb156e59" name="Changes" comment="The remaining parts include:Booking Cards / Discount Coins Display / Gold Coin Display / Backgrande Placement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/redCoin - Copy.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ByCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ByCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,8 @@
       <workItem from="1712982464536" duration="159000" />
       <workItem from="1712987498956" duration="4940000" />
       <workItem from="1713004832744" duration="12129000" />
-      <workItem from="1713019870141" duration="2924000" />
+      <workItem from="1713019870141" duration="14760000" />
+      <workItem from="1713071037326" duration="4004000" />
     </task>
     <task id="LOCAL-00001" summary="add every cards in Jpanel">
       <created>1713000809125</created>
@@ -98,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713000809125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="The remaining parts include:Booking Cards / Discount Coins Display / Gold Coin Display / Backgrande Placement">
+      <created>1713024097795</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713024097795</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,14 +125,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add every cards in Jpanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="add every cards in Jpanel" />
+    <MESSAGE value="The remaining parts include:Booking Cards / Discount Coins Display / Gold Coin Display / Backgrande Placement" />
+    <option name="LAST_COMMIT_MESSAGE" value="The remaining parts include:Booking Cards / Discount Coins Display / Gold Coin Display / Backgrande Placement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>369</line>
+          <line>484</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -139,52 +148,52 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2388</line>
+          <line>2390</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2398</line>
+          <line>2409</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2437</line>
+          <line>2475</line>
           <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2457</line>
+          <line>2495</line>
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2599</line>
+          <line>2637</line>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2583</line>
+          <line>2621</line>
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2615</line>
+          <line>2653</line>
           <option name="timeStamp" value="207" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2632</line>
+          <line>2670</line>
           <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2649</line>
+          <line>2687</line>
           <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ByCard.java</url>
-          <line>2669</line>
+          <line>2707</line>
           <option name="timeStamp" value="210" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -199,23 +208,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>838</line>
+          <line>953</line>
           <option name="timeStamp" value="263" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>721</line>
+          <line>836</line>
           <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>604</line>
+          <line>719</line>
           <option name="timeStamp" value="265" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>489</line>
+          <line>604</line>
           <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ByCard.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="283" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Player.java</url>
@@ -228,7 +242,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>160</line>
+          <line>159</line>
           <properties class="Main.ScorePage" method="showScore">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

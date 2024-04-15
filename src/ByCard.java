@@ -2497,9 +2497,12 @@ public class ByCard extends JFrame {
         returnButton.addActionListener(actionListener);
         changeTurnButton.addActionListener(actionListener);
         goToScorePageButton.addActionListener(actionListener);
-        returnButton.setBounds(600,745,200,50);
-        changeTurnButton.setBounds(800,745,200,50);
-        goToScorePageButton.setBounds(1000,745,200,50);
+        returnButton.setBounds(450,745,200,50);
+        returnButton.setBackground(new Color(255,215,0));
+        changeTurnButton.setBounds(650,745,200,50);
+        changeTurnButton.setBackground(new Color(255,215,0));
+        goToScorePageButton.setBounds(850,745,200,50);
+        goToScorePageButton.setBackground(new Color(255,215,0));
         ShowCards.add(returnButton);
         ShowCards.add(changeTurnButton);
         ShowCards.add(goToScorePageButton);
@@ -2513,7 +2516,7 @@ public class ByCard extends JFrame {
         ShowCards.setVisible(true);
     }
 
-    boolean Checkbuying(Coin[] coins,Card thisCard,int turn,Player player1,Player player2) {
+    public boolean Checkbuying(Coin[] coins,Card thisCard,int turn,Player player1,Player player2) {
         if (turn == 0) {
             if ((thisCard.getBlackCo() <= (player1.getnBlackCo() + player1.getnDIsBlackCO())) && (thisCard.getWhiteCo() <= (player1.getnWhaiteCo() + player1.getnDIsWhiteCO())) && (thisCard.getBlueCo() <= (player1.getNblueCo() + player1.getnDIsBlueCO())) && (thisCard.getRedCo() <= (player1.getnRedCo() + player1.getnDIsRedCO())) && (thisCard.getGreenCo() <= (player1.getnGreenCo() + player1.getnDIsGreenCO()))) {
 

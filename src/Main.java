@@ -152,75 +152,77 @@ public class  Main extends JFrame{
             }
         });
 
+
+        //نمایش بک گراند
+
         frame1.getContentPane().add(startButton, BorderLayout.SOUTH);
         frame1.setVisible(true);
+
     }
 
         static class ScorePage {
             public static void showScore(Player Player1, Player Player2, Card[] CardsT1, Card[] CardsT2, Card[] CardsT3, Card[] CardsT4, Coin[] coins, JLabel[] labels) {
+
+               ByCard metodBuyCards = new ByCard();
+
                 scoreFrame = new JFrame("امتیازها");
                 scoreFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 scoreFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
                 JLabel player1DisBlackCo = new JLabel("×"+Player1.getnDIsBlackCO());
+                player1DisBlackCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1DisBlackCo.setForeground(Color.BLACK);
                 JLabel player2DisBlackCo = new JLabel("×"+Player2.getnDIsBlackCO());
+                player2DisBlackCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2DisBlackCo.setForeground(Color.BLACK);
 
                 JLabel player2DisWhiteCo = new JLabel("×"+Player2.getnDIsWhiteCO());
+                player2DisWhiteCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2DisWhiteCo.setForeground(Color.WHITE);
                 JLabel player1DisWhiteCo = new JLabel("×"+Player1.getnDIsWhiteCO());
+                player1DisWhiteCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1DisWhiteCo.setForeground(Color.WHITE);
 
                 JLabel player2DisBlueCo = new JLabel("×"+Player2.getnDIsBlueCO());
+                player2DisBlueCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2DisBlueCo.setForeground(Color.BLUE);
                 JLabel player1DisBlueCo = new JLabel("×"+Player1.getnDIsBlueCO());
+                player1DisBlueCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1DisBlueCo.setForeground(Color.BLUE);
 
                 JLabel player2DisRedCo = new JLabel("×"+Player2.getnDIsRedCO());
+                player2DisRedCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2DisRedCo.setForeground(Color.RED);
                 JLabel player1DisRedCo = new JLabel("×"+Player1.getnDIsRedCO());
+                player1DisRedCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1DisRedCo.setForeground(Color.RED);
 
                 JLabel player2DisGreenCo = new JLabel("×"+Player2.getnDIsGreenCO());
+                player2DisGreenCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2DisGreenCo.setForeground(Color.GREEN);
                 JLabel player1DisGreenCo = new JLabel("×"+Player1.getnDIsGreenCO());
+                player1DisGreenCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1DisGreenCo.setForeground(Color.GREEN);
 
                 JLabel player2GoldCo = new JLabel("×"+Player2.getnGoldCo());
+                player2GoldCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player2GoldCo.setForeground(Color.ORANGE);
                 JLabel player1GoldCo = new JLabel("×"+Player1.getnGoldCo());
+                player1GoldCo.setFont(new Font("Arial", Font.BOLD, 24));
+                player1GoldCo.setForeground(Color.ORANGE);
 
                 JLabel player1ScoreLabel = new JLabel(Player2.getUsername() + ": " + Player1.getPoint());
                 JLabel player2ScoreLabel = new JLabel(Player1.getUsername() + ": " + Player2.getPoint());
 
-                JLabel Turn = new JLabel(" turn : "+currentPlayer);
-                JLabel DisBlackp1 = new JLabel(" DislBackp1 : "+Player1.getnDIsBlackCO());
-                JLabel DisWhaitp1 = new JLabel(" DisWhaitp1 : "+Player1.getnDIsWhiteCO());
-                JLabel DisBluep1 = new JLabel(" DisBluep1 : "+Player1.getnDIsBlueCO());
-                JLabel DisRedp1 = new JLabel(" DisRedp1 : "+Player1.getnDIsRedCO());
-                JLabel DisGreenp1 = new JLabel(" DisGreenp1 : "+Player1.getnDIsGreenCO());
+                JPanel panelReserveCards = new JPanel();
 
-                JLabel DisBlackp2 = new JLabel(" DislBackp2 : "+Player1.getnBlackCo());
-                JLabel DisWhaitp2 = new JLabel(" DisWhaitp2 : "+Player1.getnWhaiteCo());
-                JLabel DisBluep2 = new JLabel(" DisBluep2 : "+Player1.getNblueCo());
-                JLabel DisRedp2 = new JLabel(" DisRedp2 : "+Player1.getnRedCo());
-                JLabel DisGreenp2 = new JLabel(" DisGreenp2 : "+Player1.getnGreenCo());
+                Font font = new Font("Arial", Font.BOLD, 24);
 
-                JLabel blue1 = new JLabel(" blue1 : "+coins[8].getOwner());
-                JLabel blue2 = new JLabel(" blue2 : "+coins[9].getOwner());
-                JLabel blue3 = new JLabel(" blue3 : "+coins[10].getOwner());
-                JLabel blue4 = new JLabel(" blue4 : "+coins[11].getOwner());
+                scoreFrame.add(panelReserveCards);
 
-                JPanel scoresPanel = new JPanel();
-
-                scoresPanel.add(Turn);
-                scoresPanel.add(DisBlackp1);
-                scoresPanel.add(DisWhaitp1);
-                scoresPanel.add(DisBluep1);
-                scoresPanel.add(DisRedp1);
-                scoresPanel.add(DisGreenp1);
-                scoresPanel.add(DisBlackp2);
-                scoresPanel.add(DisWhaitp2);
-                scoresPanel.add(DisBluep2);
-                scoresPanel.add(DisRedp2);
-                scoresPanel.add(DisGreenp2);
-
-                scoresPanel.add(blue4);
-                scoresPanel.add(blue3);
-                scoresPanel.add(blue2);
-                scoresPanel.add(blue1);
 
                 JButton goToGameButton1 = new JButton("خرید کارت");
-                goToGameButton1.setPreferredSize(new Dimension(200, 100));
+                goToGameButton1.setPreferredSize(new Dimension(200, 50));
+                goToGameButton1.setBackground(new Color(255,215,0));
                 goToGameButton1.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -232,7 +234,8 @@ public class  Main extends JFrame{
                 });
 
                 JButton goToGameButton2 = new JButton("دریافت سکه");
-                goToGameButton2.setPreferredSize(new Dimension(200, 100));
+                goToGameButton2.setPreferredSize(new Dimension(200, 50));
+                goToGameButton2.setBackground(new Color(255,215,0));
                 goToGameButton2.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -330,10 +333,14 @@ public class  Main extends JFrame{
                 do {
                     // اضافه کردن لیبل امتیاز بازیکن ۱ به بالا چپ صفحه
                     player1ScoreLabel.setBounds(50, 20, 200, 100);
+                    player1ScoreLabel.setFont(new Font("Arial", Font.BOLD, 24));
+                    player1ScoreLabel.setForeground(Color.ORANGE);
                     scoreFrame.add(player1ScoreLabel);
 
                     // اضافه کردن لیبل امتیاز بازیکن ۲ به بالا راست صفحه
                     player2ScoreLabel.setBounds(1080, 10, 200, 100);
+                    player2ScoreLabel.setFont(new Font("Arial", Font.BOLD, 24));
+                    player2ScoreLabel.setForeground(Color.ORANGE);
                     scoreFrame.add(player2ScoreLabel);
 
                     JLabel[] disCoins;
@@ -341,7 +348,7 @@ public class  Main extends JFrame{
                     int i = 0;
                     ImageIcon icon = new ImageIcon("images/DISblackCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 50, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
                     player1DisBlackCo.setBounds(95, 80, 50, 50);
                     scoreFrame.add(player1DisBlackCo);
@@ -349,37 +356,37 @@ public class  Main extends JFrame{
 
                     icon = new ImageIcon("images/DISwhiteCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 150, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
                     player1DisWhiteCo.setBounds(95, 180, 50, 50);
                     scoreFrame.add(player1DisWhiteCo);
                     i++;
                     icon = new ImageIcon("images/DISblueCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 250, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
                     player1DisBlueCo.setBounds(95, 280, 50, 50);
                     scoreFrame.add(player1DisBlueCo);
                     i++;
                     icon = new ImageIcon("images/DISredCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 350, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
                     player1DisRedCo.setBounds(95, 380, 50, 50);
                     scoreFrame.add(player1DisRedCo);
                     i++;
                     icon = new ImageIcon("images/DISgreenCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 450, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
-                    player1DisGreenCo.setBounds(95, 480, 50, 50);
+                    player1DisGreenCo.setBounds(165, 480, 50, 50);
                     scoreFrame.add(player1DisGreenCo);
                     i++;
                      icon = new ImageIcon("images/goldCoin.png");
                     disCoins[i] = new JLabel(icon);
-                    disCoins[i].setBounds(20, 550, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
+                    disCoins[i].setBounds(110, 530, 100, 100); // تنظیم موقعیت و اندازه به صورت دقیق
                     scoreFrame.add(disCoins[i]);
-                    player1GoldCo.setBounds(105, 580, 50, 50);
+                    player1GoldCo.setBounds(175, 560, 50, 50);
                     scoreFrame.add(player1GoldCo);
                     i++;
 
@@ -431,12 +438,200 @@ public class  Main extends JFrame{
 
                 }while(false);
 
+
+
+                JButton PurchaseOfReservedCards = new JButton("reserved cards");
+
+                // تنظیم اندازه JButton به 50x50
+              //  PurchaseOfReservedCards.setSize(50, 50);
+
+                // قرار دادن JButton در موقعیت دلخواه
+                PurchaseOfReservedCards.setBounds(415, 738, 120, 50);
+
+                // اضافه کردن ActionListener به JButton
+                PurchaseOfReservedCards.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        // ساخت گزینه‌ها با عکس‌های مورد نظر
+                        JButton option1Button = null;// = new JButton(new ImageIcon("images/photo_5823325941244477760_y.jpg"));
+                        JButton option2Button = null;
+                        JButton option3Button = null;
+
+                        if(Player1.getnReservCard()==0){}
+                        else if(Player1.getnReservCard()==1){
+                            option1Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon("null"));
+                            option3Button = new JButton(new ImageIcon("null"));
+                        }
+                        else if(Player1.getnReservCard()==2){
+                            option1Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[1].getPath()));
+                            option3Button = new JButton(new ImageIcon("null"));
+                        }
+                        else if(Player1.getnReservCard()==3){
+                            option1Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[1].getPath()));
+                            option3Button = new JButton(new ImageIcon(Player1.getMyRservedCards()[2].getPath()));
+                        }
+
+                        // ایجاد ActionListener برای هر گزینه
+                        JButton finalOption1Button = option1Button;
+                        JButton finalOption2Button = option2Button;
+                        JButton finalOption3Button = option3Button;
+
+                        ActionListener option1Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                               boolean buying =  metodBuyCards.Checkbuying(coins,Player1.getMyRservedCards()[0], currentPlayer,Player1,Player2);
+                               if(buying==true){
+                                   Player1.setnReservCard(Player1.getnReservCard()-1);
+                                   finalOption1Button.setVisible(false);
+                               }
+                               else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        ActionListener option2Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                boolean buying =  metodBuyCards.Checkbuying(coins,Player1.getMyRservedCards()[1], currentPlayer,Player1,Player2);
+                                if(buying==true){
+                                    Player1.setnReservCard(Player1.getnReservCard()-1);
+                                    finalOption2Button.setVisible(false);
+                                }
+                                else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        ActionListener option3Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                boolean buying =  metodBuyCards.Checkbuying(coins,Player1.getMyRservedCards()[2], currentPlayer,Player1,Player2);
+                                if(buying==true){
+                                    Player1.setnReservCard(Player1.getnReservCard()-1);
+                                    finalOption3Button.setVisible(false);
+                                }
+                                else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        // اضافه کردن ActionListener به هر گزینه
+                        option1Button.addActionListener(option1Listener);
+                        option2Button.addActionListener(option2Listener);
+                        option3Button.addActionListener(option3Listener);
+
+                        // نمایش پیام در JOptionPane با استفاده از دکمه‌های تصویری
+                        Object[] options = {option1Button, option2Button, option3Button};
+                        JOptionPane.showOptionDialog(scoreFrame,
+                                "Choose one of the following options:",
+                                "Options",
+                                JOptionPane.DEFAULT_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE,
+                                null,
+                                options,
+                                options[0]);
+                    }
+                });
+
+                // اضافه کردن JButton به JFrame
+                scoreFrame.add(PurchaseOfReservedCards);
+
+
+                JButton PurchaseOfReservedCardsP2 = new JButton("reserved cards");
+
+                // تنظیم اندازه JButton به 50x50
+                //  PurchaseOfReservedCards.setSize(50, 50);
+
+                // قرار دادن JButton در موقعیت دلخواه
+                PurchaseOfReservedCardsP2.setBounds(1000, 738, 120, 50);
+
+                // اضافه کردن ActionListener به JButton
+                PurchaseOfReservedCardsP2.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        // ساخت گزینه‌ها با عکس‌های مورد نظر
+                        JButton option1Button = null;// = new JButton(new ImageIcon("images/photo_5823325941244477760_y.jpg"));
+                        JButton option2Button = null;
+                        JButton option3Button = null;
+
+                        if(Player2.getnReservCard()==0){}
+                        else if(Player2.getnReservCard()==1){
+                            option1Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon("null"));
+                            option3Button = new JButton(new ImageIcon("null"));
+                        }
+                        else if(Player2.getnReservCard()==2){
+                            option1Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[1].getPath()));
+                            option3Button = new JButton(new ImageIcon("null"));
+                        }
+                        else if(Player2.getnReservCard()==3){
+                            option1Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[0].getPath()));
+                            option2Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[1].getPath()));
+                            option3Button = new JButton(new ImageIcon(Player2.getMyRservedCards()[2].getPath()));
+                        }
+
+                        // ایجاد ActionListener برای هر گزینه
+                        JButton finalOption1Button = option1Button;
+                        JButton finalOption2Button = option2Button;
+                        JButton finalOption3Button = option3Button;
+
+                        ActionListener option1Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                boolean buying =  metodBuyCards.Checkbuying(coins,Player2.getMyRservedCards()[0], currentPlayer,Player1,Player2);
+                                if(buying==true){
+                                    Player2.setnReservCard(Player2.getnReservCard()-1);
+                                    finalOption1Button.setVisible(false);
+                                }
+                                else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        ActionListener option2Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                boolean buying =  metodBuyCards.Checkbuying(coins,Player2.getMyRservedCards()[1], currentPlayer,Player1,Player2);
+                                if(buying==true){
+                                    Player2.setnReservCard(Player2.getnReservCard()-1);
+                                    finalOption2Button.setVisible(false);
+                                }
+                                else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        ActionListener option3Listener = new ActionListener() {
+                            public void actionPerformed(ActionEvent e) {
+                                boolean buying =  metodBuyCards.Checkbuying(coins,Player2.getMyRservedCards()[2], currentPlayer,Player1,Player2);
+                                if(buying==true){
+                                    Player2.setnReservCard(Player2.getnReservCard()-1);
+                                    finalOption3Button.setVisible(false);
+                                }
+                                else JOptionPane.showMessageDialog(null, "شما نمیتوانید این کارت را بخرید");
+                            }
+                        };
+
+                        // اضافه کردن ActionListener به هر گزینه
+                        option1Button.addActionListener(option1Listener);
+                        option2Button.addActionListener(option2Listener);
+                        option3Button.addActionListener(option3Listener);
+
+                        // نمایش پیام در JOptionPane با استفاده از دکمه‌های تصویری
+                        Object[] options = {option1Button, option2Button, option3Button};
+                        JOptionPane.showOptionDialog(scoreFrame,
+                                "Choose one of the following options:",
+                                "Options",
+                                JOptionPane.DEFAULT_OPTION,
+                                JOptionPane.INFORMATION_MESSAGE,
+                                null,
+                                options,
+                                options[0]);
+                    }
+                });
+
+                // اضافه کردن JButton به JFrame
+                scoreFrame.add(PurchaseOfReservedCardsP2);
+
+
+
                 // تنظیم لایه‌بندی برای قرار دادن کلیدهای شروع بازی در پایین صفحه
                 JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
                 buttonsPanel.add(goToGameButton1);
                 buttonsPanel.add(goToGameButton2);
                 scoreFrame.setLayout(new BorderLayout());
-                scoreFrame.add(scoresPanel, BorderLayout.CENTER);
                 scoreFrame.add(buttonsPanel, BorderLayout.SOUTH);
 
                 scoreFrame.setVisible(true);
@@ -454,6 +649,26 @@ public class  Main extends JFrame{
                     });
 
                 }
+
+                JLabel coinBackPlayer1;
+                ImageIcon coinsbackP1 = new ImageIcon("images/coinBack.jpg");
+                coinBackPlayer1 = new JLabel(coinsbackP1);
+                coinBackPlayer1.setBounds(-10, 0, 700, 700); // تنظیم موقعیت و اندازه به صورت دقیق
+                scoreFrame.add(coinBackPlayer1);
+
+                JLabel coinBackPlayer2;
+                ImageIcon coinsbackP2 = new ImageIcon("images/coinBack.jpg");
+                coinBackPlayer2 = new JLabel(coinsbackP2);
+                coinBackPlayer2.setBounds(850, 0, 700, 700); // تنظیم موقعیت و اندازه به صورت دقیق
+                scoreFrame.add(coinBackPlayer2);
+
+                //نمایش بک گراند
+                JLabel background;
+                ImageIcon back = new ImageIcon("images/BackGround.jpg");
+                background = new JLabel(back);
+                background.setBounds(500, 600, 1520, 855); // تنظیم موقعیت و اندازه به صورت دقیق
+                scoreFrame.add(background);
+                scoreFrame.add(background);
             }
         }
 
@@ -467,9 +682,7 @@ public class  Main extends JFrame{
                 new JLabel(Player2.getUsername() + ": " + Player2.getPoint())
         };
 
-        JButton button1 = new JButton("دکمه ۱");
-        JButton button2 = new JButton("دکمه ۲");
-        JButton button3 = new JButton("دکمه ۳");
+
         JButton returnButton = new JButton("بازگشت به صفحه اصلی");
         JButton changeTurnButton = new JButton("تغییر نوبت");
         JButton goToScorePageButton = new JButton("نمایش امتیازها");
@@ -503,6 +716,13 @@ public class  Main extends JFrame{
                         if ((typeGiving[0] == 1 && typeGiving[1]!=0 && typeGiving[1]!=1)||(typeGiving[1]==1)) {
                             JOptionPane.showMessageDialog(null, "شما نمیتوانید چنین انتخابی داشته باشید");
                         } else if(coins[0].getOwner() ==3||coins[1].getOwner() ==3||coins[2].getOwner() ==3||coins[3].getOwner() ==3){
+/*
+                            SwingUtilities.invokeLater(new Runnable() {
+                                public void run() {
+                                    CenteredFrame.startAnimation("images/blackCoin.png",250 ,250,frame2);
+                                }
+                            });*/
+
 
                             if(typeGiving[0] ==0)
                                 typeGiving[0]=1;
@@ -1150,27 +1370,29 @@ public class  Main extends JFrame{
                 }
             };
 
-        button1.addActionListener(actionListener);
-        button2.addActionListener(actionListener);
-        button3.addActionListener(actionListener);
+
         returnButton.addActionListener(actionListener);
         changeTurnButton.addActionListener(actionListener);
         goToScorePageButton.addActionListener(actionListener);
 
-        button1.setBounds(0,745,200,50);
-        button2.setBounds(200,745,200,50);
-        button3.setBounds(400,745,200,50);
         returnButton.setBounds(600,745,200,50);
         changeTurnButton.setBounds(800,745,200,50);
         goToScorePageButton.setBounds(1000,745,200,50);
 
      //   frame2.setLayout(new FlowLayout());
-        frame2.getContentPane().add(button1);
-        frame2.getContentPane().add(button2);
-        frame2.getContentPane().add(button3);
+
         frame2.getContentPane().add(returnButton);
         frame2.getContentPane().add(changeTurnButton);
         frame2.getContentPane().add(goToScorePageButton);
+
+
+        JLabel background;
+        ImageIcon back = new ImageIcon("images/BackGround.jpg");
+        background = new JLabel(back);
+        background.setBounds(10, 0, 1520, 855); // تنظیم موقعیت و اندازه به صورت دقیق
+        frame2.add(background);
+
+
 
         // اضافه کردن label ها به frame
        for (JLabel label : playerScoreLabels) {
@@ -1410,4 +1632,42 @@ class CenteredFrame extends JFrame {
         // تنظیم مرکزی برای فریم
         setLocationRelativeTo(null);
     }
+
+
+/*
+    public static void startAnimation(String path,int x,int y,JFrame frame) {
+        int[] map = new int[2];
+        map[0] = x;
+        map[1] = y;
+        final int[] deltaX = {1};
+        int delay = 10;
+        frame {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(Color.BLUE);
+                g.fillOval(map[0], map[1], 50, 50); // رسم یک دایره
+            }
+        };
+
+        frame.add(panel);
+
+        Timer timer = new Timer(delay, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                map[0] -= deltaX[0]; // انتقال دایره به سمت راست
+                map[1] -= deltaX[0];
+                if (map[0] >= 350) {
+                    deltaX[0] = -1;
+                }
+                if (map[0] <= -50) {
+                    deltaX[0] = 0; // توقف حرکت دایره
+                    ((Timer) e.getSource()).stop(); // توقف تایمر
+                }
+                panel.repaint(); // بازسازی پنل برای نمایش تغییرات
+            }
+        });
+        timer.start(); // شروع تایمر برای اجرای انیمیشن
+    }*/
+
 }

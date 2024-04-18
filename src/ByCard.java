@@ -57,11 +57,22 @@ public class ByCard extends JFrame {
                             }
                             else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
                         } else if (option == JOptionPane.NO_OPTION) {
-                            System.out.println("reservvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
-
                             if(turn==0) {
                                 if(player1.getnReservCard()<3) {
+                                  if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+
                                     player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                  }
                                     player1.setMyRservedCards(cardsT1[0]);
                                     player1.setnReservCard(player1.getnReservCard()+1);
                                     cardsT1[0].setOwner(41);
@@ -73,9 +84,23 @@ public class ByCard extends JFrame {
                                 }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                             }
                             else if(player2.getnReservCard()<3) {
-                                player2.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+
+                                    if (coins[20].getOwner() == 3)
+                                        coins[20].setOwner(2);
+                                    else if (coins[21].getOwner() == 3)
+                                        coins[21].setOwner(2);
+                                    else if (coins[22].getOwner() == 3)
+                                        coins[22].setOwner(2);
+                                    else if (coins[23].getOwner() == 3)
+                                        coins[23].setOwner(2);
+                                    else if (coins[24].getOwner() == 3)
+                                        coins[24].setOwner(2);
+
+                                    player2.setnGoldCo(player2.getnGoldCo() + 1);
+                                }
                                 player2.setMyRservedCards(cardsT1[0]);
-                                player2.setnReservCard(player1.getnReservCard()+1);
+                                player2.setnReservCard(player2.getnReservCard()+1);
                                 cardsT1[0].setOwner(42);
                                 buttons[0].setVisible(false);
                                 ShowCards.dispose();
@@ -113,7 +138,21 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if (coins[20].getOwner() == 3)
+                                        coins[20].setOwner(1);
+                                    else if (coins[21].getOwner() == 3)
+                                        coins[21].setOwner(1);
+                                    else if (coins[22].getOwner() == 3)
+                                        coins[22].setOwner(1);
+                                    else if (coins[23].getOwner() == 3)
+                                        coins[23].setOwner(1);
+                                    else if (coins[24].getOwner() == 3)
+                                        coins[24].setOwner(1);
+
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[1]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[1].setOwner(41);
@@ -125,7 +164,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if (coins[20].getOwner() == 3)
+                                    coins[20].setOwner(2);
+                                else if (coins[21].getOwner() == 3)
+                                    coins[21].setOwner(2);
+                                else if (coins[22].getOwner() == 3)
+                                    coins[22].setOwner(2);
+                                else if (coins[23].getOwner() == 3)
+                                    coins[23].setOwner(2);
+                                else if (coins[24].getOwner() == 3)
+                                    coins[24].setOwner(2);
                             player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[1]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[1].setOwner(42);
@@ -164,8 +215,22 @@ public class ByCard extends JFrame {
                         else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
+
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[2]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[2].setOwner(41);
@@ -177,7 +242,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[2]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[2].setOwner(42);
@@ -217,7 +294,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[3]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[3].setOwner(41);
@@ -229,7 +318,21 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
+
                             player2.setMyRservedCards(cardsT1[3]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[3].setOwner(42);
@@ -269,7 +372,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[4]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[4].setOwner(41);
@@ -281,7 +396,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            };
                             player2.setMyRservedCards(cardsT1[4]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[4].setOwner(42);
@@ -321,7 +448,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[5]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[5].setOwner(41);
@@ -333,7 +472,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[5]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[5].setOwner(42);
@@ -373,7 +524,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[6]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[6].setOwner(41);
@@ -385,7 +548,21 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
+
                             player2.setnReservCard(player2.getnReservCard()+1);
                             player2.setMyRservedCards(cardsT1[6]);
                             cardsT1[6].setOwner(42);
@@ -425,7 +602,21 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
+
                                 player1.setMyRservedCards(cardsT1[7]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[7].setOwner(41);
@@ -437,7 +628,21 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
+
                             player2.setMyRservedCards(cardsT1[7]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[7].setOwner(42);
@@ -477,7 +682,20 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[8]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[8].setOwner(41);
@@ -489,7 +707,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[8]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[8].setOwner(42);
@@ -529,7 +759,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[9]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[9].setOwner(41);
@@ -541,7 +783,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[9]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[9].setOwner(42);
@@ -581,8 +835,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
-                                player1.setMyRservedCards(cardsT1[10]);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }                                player1.setMyRservedCards(cardsT1[10]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[10].setOwner(41);
                                 buttons[10].setVisible(false);
@@ -593,7 +858,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[10]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[10].setOwner(42);
@@ -633,7 +910,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[11]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[11].setOwner(41);
@@ -645,7 +934,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[11]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[11].setOwner(42);
@@ -685,7 +986,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[12]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[12].setOwner(41);
@@ -697,7 +1010,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[12]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[12].setOwner(42);
@@ -737,7 +1062,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[13]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[13].setOwner(41);
@@ -749,7 +1086,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[13]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[13].setOwner(42);
@@ -789,7 +1138,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT1[14]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT1[14].setOwner(41);
@@ -801,7 +1162,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT1[14]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT1[14].setOwner(42);
@@ -843,7 +1216,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[0]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[0].setOwner(41);
@@ -855,7 +1240,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[0]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[0].setOwner(42);
@@ -895,7 +1292,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[1]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[1].setOwner(41);
@@ -907,7 +1316,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[1]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[1].setOwner(42);
@@ -947,7 +1368,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[2]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[2].setOwner(41);
@@ -959,7 +1392,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[2]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[2].setOwner(42);
@@ -999,7 +1444,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                };
                                 player1.setMyRservedCards(cardsT2[3]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[3].setOwner(41);
@@ -1011,7 +1468,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[3]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[3].setOwner(42);
@@ -1051,7 +1520,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[4]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[4].setOwner(41);
@@ -1063,7 +1544,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[4]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[4].setOwner(42);
@@ -1103,7 +1596,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[5]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[5].setOwner(41);
@@ -1115,7 +1620,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[5]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[5].setOwner(42);
@@ -1155,7 +1672,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[6]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[6].setOwner(41);
@@ -1167,7 +1696,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[6]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[6].setOwner(42);
@@ -1207,7 +1748,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[7]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[7].setOwner(41);
@@ -1219,7 +1772,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[7]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[7].setOwner(42);
@@ -1259,7 +1824,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[8]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[8].setOwner(41);
@@ -1271,7 +1848,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[8]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[8].setOwner(42);
@@ -1311,7 +1900,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[9]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[9].setOwner(41);
@@ -1323,7 +1924,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[9]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[9].setOwner(42);
@@ -1363,7 +1976,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[10]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[10].setOwner(41);
@@ -1375,7 +2000,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[10]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[10].setOwner(42);
@@ -1415,7 +2052,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[11]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[11].setOwner(41);
@@ -1427,7 +2076,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[11]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[11].setOwner(42);
@@ -1466,8 +2127,21 @@ public class ByCard extends JFrame {
                         else{JOptionPane.showMessageDialog(ByCard.this, "You can not buy this card!");}
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
+
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[12]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[12].setOwner(41);
@@ -1479,7 +2153,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[12]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[12].setOwner(42);
@@ -1519,7 +2205,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[13]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[13].setOwner(41);
@@ -1531,7 +2229,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[13]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[13].setOwner(42);
@@ -1571,7 +2281,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT2[14]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT2[14].setOwner(41);
@@ -1583,7 +2305,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT2[14]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT2[14].setOwner(42);
@@ -1625,7 +2359,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[0]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[0].setOwner(41);
@@ -1637,7 +2383,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[0]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[0].setOwner(42);
@@ -1678,7 +2436,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[1]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[1].setOwner(41);
@@ -1690,7 +2460,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[1]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[1].setOwner(42);
@@ -1730,7 +2512,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[2]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[2].setOwner(41);
@@ -1742,7 +2536,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[2]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[2].setOwner(42);
@@ -1781,7 +2587,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[3]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[3].setOwner(41);
@@ -1793,7 +2611,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[3]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[3].setOwner(42);
@@ -1833,7 +2663,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[4]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[4].setOwner(41);
@@ -1845,7 +2687,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[4]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[4].setOwner(42);
@@ -1885,7 +2739,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[5]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[5].setOwner(41);
@@ -1897,7 +2763,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[5]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[5].setOwner(42);
@@ -1937,7 +2815,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[6]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[6].setOwner(41);
@@ -1949,7 +2839,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[6]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[6].setOwner(42);
@@ -1989,7 +2891,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[7]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[7].setOwner(41);
@@ -2001,7 +2915,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[7]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[7].setOwner(42);
@@ -2041,7 +2967,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[8]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[8].setOwner(41);
@@ -2053,7 +2991,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[8]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[8].setOwner(42);
@@ -2093,7 +3043,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[9]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[9].setOwner(41);
@@ -2105,7 +3067,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[9]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[9].setOwner(42);
@@ -2145,7 +3119,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[10]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[10].setOwner(41);
@@ -2157,7 +3143,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[10]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[10].setOwner(42);
@@ -2197,7 +3195,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[11]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[11].setOwner(41);
@@ -2209,7 +3219,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[11]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[11].setOwner(42);
@@ -2249,7 +3271,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[12]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[12].setOwner(41);
@@ -2261,7 +3295,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[12]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[12].setOwner(42);
@@ -2301,7 +3347,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[13]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[13].setOwner(41);
@@ -2313,7 +3371,31 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
+                            }
                             player2.setMyRservedCards(cardsT3[13]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[13].setOwner(42);
@@ -2326,7 +3408,6 @@ public class ByCard extends JFrame {
                     }
                 }
             }
-
         });
             panel3.add(buttons[43]);
 
@@ -2353,7 +3434,19 @@ public class ByCard extends JFrame {
                     } else if (option == JOptionPane.NO_OPTION) {
                         if(turn==0) {
                             if(player1.getnReservCard()<3) {
-                                player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                    if(coins[20].getOwner()==3)
+                                        coins[20].setOwner(1);
+                                    else if(coins[21].getOwner()==3)
+                                        coins[21].setOwner(1);
+                                    else if(coins[22].getOwner()==3)
+                                        coins[22].setOwner(1);
+                                    else if(coins[23].getOwner()==3)
+                                        coins[23].setOwner(1);
+                                    else if(coins[24].getOwner()==3)
+                                        coins[24].setOwner(1);
+                                    player1.setnGoldCo(player1.getnGoldCo() + 1);
+                                }
                                 player1.setMyRservedCards(cardsT3[14]);
                                 player1.setnReservCard(player1.getnReservCard()+1);
                                 cardsT3[14].setOwner(41);
@@ -2365,7 +3458,19 @@ public class ByCard extends JFrame {
                             }else JOptionPane.showMessageDialog(ByCard.this, "You have reserved 3 cards!");
                         }
                         else if(player2.getnReservCard()<3) {
-                            player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            if( (player1.getnGoldCo()+player2.getnGoldCo())!=5) {
+                                if(coins[20].getOwner()==3)
+                                    coins[20].setOwner(2);
+                                else if(coins[21].getOwner()==3)
+                                    coins[21].setOwner(2);
+                                else if(coins[22].getOwner()==3)
+                                    coins[22].setOwner(2);
+                                else if(coins[23].getOwner()==3)
+                                    coins[23].setOwner(2);
+                                else if(coins[24].getOwner()==3)
+                                    coins[24].setOwner(2);
+                                player2.setnGoldCo(player2.getnGoldCo() + 1);
+                            }
                             player2.setMyRservedCards(cardsT3[14]);
                             player2.setnReservCard(player2.getnReservCard()+1);
                             cardsT3[14].setOwner(42);
@@ -2508,9 +3613,6 @@ public class ByCard extends JFrame {
         ShowCards.add(goToScorePageButton);
         // Add the main panel to the frame
         getContentPane().add(mainPanel);
-
-        // Adjust the frame size
-        pack();
 
         ShowCards.add(mainPanel);
         ShowCards.setVisible(true);

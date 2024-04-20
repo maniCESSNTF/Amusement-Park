@@ -8,19 +8,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-//this cooment is alaki
-//you are good?
 public class  Main extends JFrame{
     private static JFrame frame1;
     private static JFrame frame2;
-    private static int turn;
     private static JFrame scoreFrame;
-    private static JFrame winerFrame;
     private static int currentPlayer = 0;
     private static Font defaultFont = new Font("tahoma", Font.BOLD, 20);
     private static JTextField PlayerUername2txt;
     private static JTextField PlayerUername1txt;
-    private static JFrame ShowCards;
 
     public static void main(String[] args) {
         frame1 = new JFrame("صفحه اول");
@@ -28,8 +23,7 @@ public class  Main extends JFrame{
         frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         JButton startButton = new JButton("شروع");
-
-        for(int g=0;g<5;g++);
+        startButton.setBackground(new Color(255,215,0));
 
         JPanel centerPanel = new JPanel(new GridLayout(2, 2, 0, 10));
 
@@ -54,12 +48,10 @@ public class  Main extends JFrame{
         centerPanel.setBorder(new EmptyBorder(300, 100, 100, 100));
         frame1.getContentPane().add(centerPanel, BorderLayout.CENTER);
 
-        Card[] CardsT0 = new Card[3];
         Card CardsT1[] = new Card[15];
         Card CardsT2[] = new Card[15];
         Card CardsT3[] = new Card[15];
         Card CardsT4[] = new Card[3];
-
 
         CardsT1[0] = new Card( 1, 0, 0, 0, 2, 2, 1, 11, 1, "images/card11.jpg", false, 3,false);
         CardsT1[1] = new Card( 0, 2, 0, 0, 0, 2, 1, 12, 2, "images/card12.jpg", false, 3,false);
@@ -109,9 +101,9 @@ public class  Main extends JFrame{
         CardsT3[13] = new Card( 4, 2, 0, 3, 1, 4, 1, 314, 2, "images/card314.jpg", false, 3,false);
         CardsT3[14] = new Card( 4, 3, 3, 0, 2, 2, 1, 315, 5, "images/card315.jpg", false, 3,false);
 
-        CardsT4[0] = new Card(0,0,0,0,0,0,0,0,0,"aaa",false,3,false);
-        CardsT4[1] = new Card(0,0,0,0,0,0,0,0,0,"aaa",false,3,false);
-        CardsT4[2] = new Card(0,0,0,0,0,0,0,0,0,"aaa",false,3,false);
+        CardsT4[0]  = new Card(3,3,0,0,3,3,0,0,0,"images/prise1.jpg",false,3,false);
+        CardsT4[1] = new Card(3,0,3,3,4,0,0,0,0,"images/prise2.jpg",false,3,false);
+        CardsT4[2] = new Card(4,4,0,3,0,3,0,0,0,"images/prise3.jpg",false,3,false);
 
         Coin[] coins = new Coin[25];
         for(int i = 0;i<4;i++){
@@ -225,10 +217,7 @@ public class  Main extends JFrame{
 
                 JPanel panelReserveCards = new JPanel();
 
-                Font font = new Font("Arial", Font.BOLD, 24);
-
                 scoreFrame.add(panelReserveCards);
-
 
                 JButton goToGameButton1 = new JButton("خرید کارت");
                 goToGameButton1.setPreferredSize(new Dimension(200, 50));
@@ -366,7 +355,6 @@ public class  Main extends JFrame{
                     scoreFrame.add(player2Username);
 
                     JLabel ScoreBoard;
-                    ScoreBoard = new JLabel();
                     ImageIcon ScoreBoardImage = new ImageIcon("images/ScoreBoard.png");
                     ScoreBoard = new JLabel(ScoreBoardImage);
                     ScoreBoard.setBounds(520, 20, 500, 70);
@@ -465,7 +453,6 @@ public class  Main extends JFrame{
                     scoreFrame.add(disCoins[i]);
                     player2GoldCo.setBounds(1085, 580, 50, 50);
                     scoreFrame.add(player2GoldCo);
-                    i++;
 
                 }while(false);
 
@@ -660,16 +647,28 @@ public class  Main extends JFrame{
                 scoreFrame.setVisible(true);
 
                 if((Player1.getPoint()>=15 || Player2.getPoint()>=15) && currentPlayer==0){
-        //           frame2.dispose();
                    frame1.dispose();
                    scoreFrame.dispose();
-                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                        public void run() {
-                            CenteredFrame frame = new CenteredFrame(Player1,Player2);
+
+                            JFrame frame = new JFrame();
+                            frame.setSize(500,500);
+                            JLabel winer;
+                            JLabel backWON;
+                            if(Player1.getPoint()>=15 ) {
+                                winer  = new JLabel("          (((((((:" + Player1.getUsername() + " won this game :))))))");
+                                winer.setFont(new Font("Arial", Font.BOLD, 24));
+                                winer.setForeground(Color.BLACK);
+
+                                frame.add(winer);
+                            }else if(Player2.getPoint()>=15){
+                                winer = new JLabel("           (((((((:" + Player2.getUsername() + " won this game :))))))");
+                                winer.setFont(new Font("Arial", Font.BOLD, 24));
+                                winer.setForeground(Color.BLACK);
+                                frame.add(winer);
+                            }
+
                             // نمایش فریم
                             frame.setVisible(true);
-                        }
-                    });
 
                 }
 
@@ -881,7 +880,7 @@ public class  Main extends JFrame{
                         }
                         if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     else {
                         if ((typeGiving[0] == 2 && typeGiving[1]!=0 && typeGiving[1]!=2)||(typeGiving[1]==2)||((typeGiving[0]==2) && (Player1.getnWhaiteCo()+Player2.getnWhaiteCo())!=1)) {
@@ -912,7 +911,7 @@ public class  Main extends JFrame{
                         }
                         if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -997,7 +996,7 @@ public class  Main extends JFrame{
                         }
                         if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     else {
                         if ((typeGiving[0] == 3 && typeGiving[1]!=0 && typeGiving[1]!=3)||(typeGiving[1]==3)||((typeGiving[0]==3) && (Player1.getNblueCo()+Player2.getNblueCo())!=1)) {
@@ -1028,7 +1027,7 @@ public class  Main extends JFrame{
                         }
                         if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -1115,7 +1114,7 @@ public class  Main extends JFrame{
                         }
                         if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     else {
                         if ((typeGiving[0] == 4 && typeGiving[1] != 0 && typeGiving[1] != 4)||(typeGiving[1]==4)||((typeGiving[0]==4) && (Player1.getnRedCo()+Player2.getnRedCo())!=1)) {
@@ -1145,7 +1144,7 @@ public class  Main extends JFrame{
                         }
                         if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
 
                     if(typeGiving[0]==typeGiving[1]) {
@@ -1231,7 +1230,7 @@ public class  Main extends JFrame{
                         }
                         if((Player1.getnBlackCo()+Player1.getnWhaiteCo()+Player1.getNblueCo()+Player1.getnRedCo()+Player1.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     else {
                         if ((typeGiving[0] == 5 && typeGiving[1]!=0  && typeGiving[1]!=5)||(typeGiving[1]==5)||((typeGiving[0]==5) && (Player1.getnGreenCo()+Player2.getnGreenCo())!=1)) {
@@ -1262,7 +1261,7 @@ public class  Main extends JFrame{
                         }
                         if((Player2.getnBlackCo()+Player2.getnWhaiteCo()+Player2.getNblueCo()+Player2.getnRedCo()+Player2.getnGreenCo())>10){
                             returnCoins( Player1, Player2,coins);
-                        };
+                        }
                     }
                     if(typeGiving[0]==typeGiving[1]) {
                         typeGiving[0]=0;
@@ -1387,9 +1386,12 @@ public class  Main extends JFrame{
         changeTurnButton.addActionListener(actionListener);
         goToScorePageButton.addActionListener(actionListener);
 
-        returnButton.setBounds(600,745,200,50);
-        changeTurnButton.setBounds(800,745,200,50);
-        goToScorePageButton.setBounds(1000,745,200,50);
+        returnButton.setBounds(450,745,200,50);
+        returnButton.setBackground(new Color(255,215,0));
+        changeTurnButton.setBounds(650,745,200,50);
+        changeTurnButton.setBackground(new Color(255,215,0));
+        goToScorePageButton.setBounds(850,745,200,50);
+        goToScorePageButton.setBackground(new Color(255,215,0));
 
 
         frame2.getContentPane().add(returnButton);
@@ -1617,65 +1619,4 @@ public class  Main extends JFrame{
             }
         }
     }
-}
-class CenteredFrame extends JFrame {
-    public CenteredFrame(Player player1,Player player2) {
-        setTitle("Centered Frame");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JLabel label = null;
-        // تعیین ابعاد فریم
-        setSize(400, 300);
-        if(player1.getPoint()>=15 && player2.getPoint()>=15){
-            if(player1.getNumberCards()>player2.getNumberCards())
-             label= new JLabel("         player2 is winer");
-            else
-                label= new JLabel("         player1 is winer");
-        }else if(player1.getPoint()>=15)
-            label= new JLabel("         player1 is winer");
-        else if(player2.getPoint()>=15)
-            label= new JLabel("         player2 is winer");
-
-
-        add(label);
-        // تنظیم مرکزی برای فریم
-        setLocationRelativeTo(null);
-    }
-
-
-/*
-    public static void startAnimation(String path,int x,int y,JFrame frame) {
-        int[] map = new int[2];
-        map[0] = x;
-        map[1] = y;
-        final int[] deltaX = {1};
-        int delay = 10;
-        frame {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.setColor(Color.BLUE);
-                g.fillOval(map[0], map[1], 50, 50); // رسم یک دایره
-            }
-        };
-
-        frame.add(panel);
-
-        Timer timer = new Timer(delay, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                map[0] -= deltaX[0]; // انتقال دایره به سمت راست
-                map[1] -= deltaX[0];
-                if (map[0] >= 350) {
-                    deltaX[0] = -1;
-                }
-                if (map[0] <= -50) {
-                    deltaX[0] = 0; // توقف حرکت دایره
-                    ((Timer) e.getSource()).stop(); // توقف تایمر
-                }
-                panel.repaint(); // بازسازی پنل برای نمایش تغییرات
-            }
-        });
-        timer.start(); // شروع تایمر برای اجرای انیمیشن
-    }*/
-
 }

@@ -3487,6 +3487,93 @@ public class ByCard extends JFrame {
         });
             panel3.add(buttons[44]);
 
+          /////////////////////////////  prise cards
+
+        buttons[45] = new JButton();
+        buttons[45].setPreferredSize(new Dimension(140, 190)); // Set preferred size
+        buttons[45].setActionCommand("Cprise1");
+        buttons[45].setIcon(new ImageIcon("images\\prise1.jpg")); // تنظیم تصویر برای دکمه گرد
+        buttons[45].setVisible(false);
+        buttons[45].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("Cprise1")){
+                    if(turn==0){
+                        if(player1.getnDIsBlackCO()>=cardsT4[0].getBlackCo() && player1.getnDIsWhiteCO()>=cardsT4[0].getWhiteCo()&&player1.getnDIsBlackCO()>=cardsT4[0].getBlueCo()&&player1.getnDIsRedCO()>=cardsT4[0].getRedCo()&&player1.getnDIsGreenCO()>=cardsT4[0].getGreenCo()){
+                            cardsT4[0].setOwner(1);
+                            buttons[45].setVisible(false);
+                            player1.setPoint(cardsT4[0].getPoint());
+                        }
+                    }else  if(turn==1){
+                        if(player2.getnDIsBlackCO()>=cardsT4[0].getBlackCo() && player2.getnDIsWhiteCO()>=cardsT4[0].getWhiteCo()&&player2.getnDIsBlackCO()>=cardsT4[0].getBlueCo()&&player2.getnDIsRedCO()>=cardsT4[0].getRedCo()&&player2.getnDIsGreenCO()>=cardsT4[0].getGreenCo()){
+                            cardsT4[0].setOwner(2);
+                            buttons[45].setVisible(false);
+                            player2.setPoint(cardsT4[0].getPoint());
+                        }
+                    }
+                }
+            }
+
+        });
+        panel1.add(buttons[45]);
+
+
+        buttons[46] = new JButton();
+        buttons[46].setPreferredSize(new Dimension(140, 190)); // Set preferred size
+        buttons[46].setActionCommand("Cprise2");
+        buttons[46].setIcon(new ImageIcon("images\\prise2.jpg")); // تنظیم تصویر برای دکمه گرد
+        buttons[46].setVisible(false);
+        buttons[46].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("Cprise2")){
+                    if(turn==0){
+                        if(player1.getnDIsBlackCO()>=cardsT4[1].getBlackCo() && player1.getnDIsWhiteCO()>=cardsT4[1].getWhiteCo()&&player1.getnDIsBlackCO()>=cardsT4[1].getBlueCo()&&player1.getnDIsRedCO()>=cardsT4[1].getRedCo()&&player1.getnDIsGreenCO()>=cardsT4[1].getGreenCo()){
+                            cardsT4[1].setOwner(1);
+                            buttons[46].setVisible(false);
+                            player1.setPoint(cardsT4[1].getPoint());
+                        }
+                    }else  if(turn==1){
+                        if(player2.getnDIsBlackCO()>=cardsT4[1].getBlackCo() && player2.getnDIsWhiteCO()>=cardsT4[1].getWhiteCo()&&player2.getnDIsBlackCO()>=cardsT4[1].getBlueCo()&&player2.getnDIsRedCO()>=cardsT4[1].getRedCo()&&player2.getnDIsGreenCO()>=cardsT4[1].getGreenCo()){
+                            cardsT4[1].setOwner(2);
+                            buttons[46].setVisible(false);
+                            player2.setPoint(cardsT4[1].getPoint());
+                        }
+                    }
+                }
+            }
+
+        });
+        panel2.add(buttons[46]);
+
+        buttons[47] = new JButton();
+        buttons[47].setPreferredSize(new Dimension(140, 190)); // Set preferred size
+        buttons[47].setActionCommand("Cprise3");
+        buttons[47].setIcon(new ImageIcon("images\\prise3.jpg")); // تنظیم تصویر برای دکمه گرد
+        buttons[47].setVisible(false);
+        buttons[47].addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getActionCommand().equals("Cprise3")){
+                    if(turn==0){
+                        if(player1.getnDIsBlackCO()>=cardsT4[2].getBlackCo() && player1.getnDIsWhiteCO()>=cardsT4[2].getWhiteCo()&&player1.getnDIsBlackCO()>=cardsT4[2].getBlueCo()&&player1.getnDIsRedCO()>=cardsT4[2].getRedCo()&&player1.getnDIsGreenCO()>=cardsT4[2].getGreenCo()){
+                            cardsT4[2].setOwner(1);
+                            buttons[47].setVisible(false);
+                            player1.setPoint(cardsT4[2].getPoint());
+                        }
+                    }else  if(turn==1){
+                        if(player2.getnDIsBlackCO()>=cardsT4[2].getBlackCo() && player2.getnDIsWhiteCO()>=cardsT4[2].getWhiteCo()&&player2.getnDIsBlackCO()>=cardsT4[2].getBlueCo()&&player2.getnDIsRedCO()>=cardsT4[2].getRedCo()&&player2.getnDIsGreenCO()>=cardsT4[2].getGreenCo()){
+                            cardsT4[2].setOwner(2);
+                            buttons[47].setVisible(false);
+                            player2.setPoint(cardsT4[2].getPoint());
+                        }
+                    }
+                }
+            }
+
+        });
+        panel3.add(buttons[47]);
+
             Random number = new Random();
 
         //جایگزینی کارت های جدید از نوع 1
@@ -3567,6 +3654,20 @@ public class ByCard extends JFrame {
                     }
             }
         // Add panels to the grid panel
+
+        if(cardsT4[0].getOwner()==3){
+            buttons[45].setVisible(true);
+        }
+        if(cardsT4[1].getOwner()==3){
+            buttons[46].setVisible(true);
+        }
+        if(cardsT4[2].getOwner()==3){
+            buttons[47].setVisible(true);
+        }
+
+
+
+
         gridPanel.add(panel1);
         gridPanel.add(panel2);
         gridPanel.add(panel3);
